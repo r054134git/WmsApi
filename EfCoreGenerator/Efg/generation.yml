@@ -1,0 +1,114 @@
+project:
+  namespace: 'WmsApi'
+  directory: .\
+database:
+  provider: MySQL
+  connectionString: "server=10.11.1.3;port=3306;user id=wms;pwd=PcrDb123%;database=wmspcr;sslmode=none;"
+  userSecretsId: 984ef0cf-2b22-4fd1-876d-e01499da4c1f
+  tableNaming: Singular
+  tables: []
+  schemas: []
+  exclude: []
+data:
+  context:
+    name: '{Database.Name}Context'
+    baseClass: DbContext
+    propertyNaming: Plural
+    namespace: '{Project.Namespace}.Domain'
+    directory: '..\..\WmsApi.Domain\Domain'
+    document: true
+  entity:
+    entityNaming: Singular
+    relationshipNaming: Plural
+    baseClass: IHaveIdentifier
+    prefixWithSchemaName: false
+    namespace: '{Project.Namespace}.Domain.Entities'
+    directory: '..\..\WmsApi.Domain\Domain\{Entity.Name}\Entities'
+    document: true
+  mapping:
+    namespace: '{Project.Namespace}.Domain.Mapping'
+    directory: '..\..\WmsApi.Domain\Domain\{Entity.Name}\Mapping'
+    document: true
+  query:
+    generate: true
+    indexPrefix: By
+    uniquePrefix: GetBy
+    namespace: '{Project.Namespace}.Domain.Queries'
+    directory: '..\..\WmsApi.Domain\Domain\{Entity.Name}\Queries'
+    document: true
+model:
+  shared:
+    namespace: '{Project.Namespace}.Contracts.Models'
+    directory: '..\..\WmsApi.Contracts\Contracts\{Entity.Name}\Models'
+    include:
+      entities: []
+      properties: []
+    exclude:
+      entities: []
+      properties:
+        - '\.Id$'
+        - '\.IsEnable$'
+        - '\.CreateTime$'
+        - '\.CreateUser$'
+        - '\.UpdateTime$'
+        - '\.UpdateUser$'
+        - '\.RowVersion$'
+        - 'User\.PasswordHash$'
+        - 'User\.ResetHash$'
+        - 'User\.InviteHash$'
+  read:
+    generate: true
+    name: '{Entity.Name}ReadModel'
+    baseClass: EntityReadModel
+    include:
+      entities: []
+      properties: []
+    exclude:
+      entities: []
+      properties: []
+    document: true
+  create:
+    generate: true
+    name: '{Entity.Name}CreateModel'
+    baseClass: EntityCreateModel
+    include:
+      entities: []
+      properties: []
+    exclude:
+      entities: []
+      properties: []
+    document: true
+  update:
+    generate: true
+    name: '{Entity.Name}UpdateModel'
+    baseClass: EntityUpdateModel
+    include:
+      entities: []
+      properties: []
+    exclude:
+      entities: []
+      properties: []
+    document: true
+  mapper:
+    generate: true
+    overwrite: false
+    name: '{Entity.Name}Profile'
+    baseClass: AutoMapper.Profile
+    namespace: '{Project.Namespace}.Domain.MapperProfile'
+    directory: '..\..\WmsApi.Domain\Domain\{Entity.Name}\MapperProfile'
+    document: true
+  validator:
+    generate: true
+    name: '{Model.Name}Validator'
+    baseClass: AbstractValidator<{Model.Name}>
+    namespace: '{Project.Namespace}.Domain.Validation'
+    directory: '..\..\WmsApi.Domain\Domain\{Entity.Name}\Validation'
+    document: true
+script:
+  context: []
+  entity: 
+    - templatePath: '.\templates\controller.csx'           # path to script file
+      fileName: '{Entity.Name}Controller.cs'               # filename to save script output
+      directory: '{Project.Directory}\Controllers'   # directory to save script output
+      overwrite: false   
+  model: []
