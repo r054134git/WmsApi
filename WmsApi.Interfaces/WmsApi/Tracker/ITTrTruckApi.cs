@@ -9,18 +9,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrTruckApi
+    public partial interface ITTrTruckApi
     {
         [Get("/tracker/TTrTruck/GetAllTrucks")]
         Task<List<TTrTruckReadModel>> GetAllTrucks(string bayId = null);
 
-        /// <summary>
-        /// 获取当前进库汽车排队信息
-        /// </summary>
-        /// <param name="bayName">装卷仓库名称列表</param>
-        /// <param name="dispatchState">发送状态</param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/tracker/TTrTruck/GetAllTruckLines")]
         Task<List<TTrTruckReadModel>> GetAllTruckLines(string bayName = null, int? dispatchState = null);
 
@@ -46,7 +39,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrTruckUpdateModel updateModel);
 
         [Delete("/tracker/TTrTruck/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrTruck/Get/{id}")]
         Task<TTrTruckReadModel> Get(string id);

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcTelegramApi
+    public partial interface ITRcTelegramApi
     {
         [Post("/report/TRcTelegram/Create")]
         Task<OperationResult> Create([Body] TRcTelegramCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcTelegramUpdateModel updateModel);
 
         [Delete("/report/TRcTelegram/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcTelegram/Get/{id}")]
         Task<TRcTelegramReadModel> Get(string id);

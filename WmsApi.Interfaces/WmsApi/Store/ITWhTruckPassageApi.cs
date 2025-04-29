@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhTruckPassageApi
+    public partial interface ITWhTruckPassageApi
     {
         [Post("/store/TWhTruckPassage/Create")]
         Task<OperationResult> Create([Body] TWhTruckPassageCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhTruckPassageUpdateModel updateModel);
 
         [Delete("/store/TWhTruckPassage/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhTruckPassage/Get/{id}")]
         Task<TWhTruckPassageReadModel> Get(string id);

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhPlanTypeApi
+    public partial interface ITWhPlanTypeApi
     {
         [Post("/store/TWhPlanType/Create")]
         Task<OperationResult> Create([Body] TWhPlanTypeCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhPlanTypeUpdateModel updateModel);
 
         [Delete("/store/TWhPlanType/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhPlanType/Get/{id}")]
         Task<TWhPlanTypeReadModel> Get(string id);

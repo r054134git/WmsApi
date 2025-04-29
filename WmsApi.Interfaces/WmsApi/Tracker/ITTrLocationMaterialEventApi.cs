@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrLocationMaterialEventApi
+    public partial interface ITTrLocationMaterialEventApi
     {
         [Post("/tracker/TTrLocationMaterialEvent/Create")]
         Task<OperationResult> Create([Body] TTrLocationMaterialEventCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrLocationMaterialEventUpdateModel updateModel);
 
         [Delete("/tracker/TTrLocationMaterialEvent/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrLocationMaterialEvent/Get/{id}")]
         Task<TTrLocationMaterialEventReadModel> Get(string id);

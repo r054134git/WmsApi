@@ -8,31 +8,19 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhLocationApi
+    public partial interface ITWhLocationApi
     {
         [Get("/store/TWhLocation/GetListQuery")]
-        Task<PageResult<TWhLocationReadModel>> GetListQuery([Query] string[] bayId = null, [Query] string[] areaId = null, [Query] string[] ownerId = null);
+        Task<PageResult<TWhLocationReadModel>> GetListQuery(string[] bayId = null, string[] areaId = null, string[] ownerId = null);
 
-        /// <summary>
-        /// 库位信息筛选
-        /// </summary>
-        /// <returns></returns>
         [Get("/store/TWhLocation/GetPageQuery")]
-        Task<PageResult<TWhLocationReadModel>> GetPageQuery(int? current = null, int? pageSize = null, [Query] string[] bayId = null, [Query] string[] areaId = null, [Query] string[] ownerId = null, [Query] int[] floorNo = null, [Query] int[] orientation = null, [Query] int[] isVirtual = null, [Query] int[] storageType = null, [Query] int[] loadType = null, [Query] int[] isEnable = null);
+        Task<PageResult<TWhLocationReadModel>> GetPageQuery(int? current = null, int? pageSize = null, string[] bayId = null, string[] areaId = null, string[] ownerId = null, int[] floorNo = null, int[] orientation = null, int[] isVirtual = null, int[] storageType = null, int[] loadType = null, int[] isEnable = null);
 
-        /// <summary>
-        /// 库位批量禁用
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhLocation/UpdateLocationDisabled")]
-        Task<PageResult<TWhLocationReadModel>> UpdateLocationDisabled([Query] string[] ids = null, string remark = null);
+        Task<PageResult<TWhLocationReadModel>> UpdateLocationDisabled(string[] ids = null, string remark = null);
 
-        /// <summary>
-        /// 库位批量启用
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhLocation/UpdateLocationIsEnable")]
-        Task<PageResult<TWhLocationReadModel>> UpdateLocationIsEnable([Query] string[] ids = null, string remark = null);
+        Task<PageResult<TWhLocationReadModel>> UpdateLocationIsEnable(string[] ids = null, string remark = null);
 
         [Get("/store/TWhLocation/GetLocation")]
         Task<TWhLocationReadModel> GetLocation(string locationId = null);
@@ -49,28 +37,12 @@ namespace WmsApi.Store
         [Post("/store/TWhLocation/BatchCreateLocations")]
         Task<bool> BatchCreateLocations([Body] BatchCreateLocationParam param);
 
-        /// <summary>
-        /// 批量更新鞍座行列坐标
-        /// </summary>
-        /// <param name="param"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Post("/store/TWhLocation/BatchUpdateLocationXY")]
         Task<bool> BatchUpdateLocationXY([Body] BatchAdjustXyParam param);
 
-        /// <summary>
-        /// 批量更改鞍座行间距
-        /// </summary>
-        /// <param name="param"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Post("/store/TWhLocation/BatchUpdateLocationSpacing")]
         Task<bool> BatchUpdateLocationSpacing([Body] BatchSpacingParam param);
 
-        /// <summary>
-        /// 创建库位
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhLocation/SendMesInfo")]
         Task<OperationResult> SendMesInfo([Body] TWhLocationCreateModel createModel);
 
@@ -81,28 +53,14 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhLocationUpdateModel updateModel);
 
         [Delete("/store/TWhLocation/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
-        /// <summary>
-        /// 批量更新区域类型
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhLocation/UpdateLocationBuss")]
         Task<OperationResult> UpdateLocationBuss(string bayId = null, string areaId = null, string stackId = null, string buss = null);
 
-        /// <summary>
-        /// 批量更新库位类型
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhLocation/UpdateLocationStorageType")]
         Task<OperationResult> UpdateLocationStorageType(string bayId = null, string areaId = null, string stackId = null, int? storageType = null);
 
-        /// <summary>
-        /// 获取列号
-        /// </summary>
-        /// <param name="stackId"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/store/TWhLocation/GetListOfLocation")]
         Task<PageResult<TWhLocationReadModel>> GetListOfLocation(string stackId = null);
 

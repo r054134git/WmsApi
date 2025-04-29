@@ -9,40 +9,20 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcInventoryDetailApi
+    public partial interface ITRcInventoryDetailApi
     {
-        /// <summary>
-        /// 添加扫描信息
-        /// </summary>
-        /// <returns></returns>
         [Post("/report/TRcInventoryDetail/AddScanDetailEx")]
         Task<AddScanDetailResult> AddScanDetailEx(string bayId = null, string planNo = null, string materialNo = null);
 
-        /// <summary>
-        /// 添加扫描信息
-        /// </summary>
-        /// <returns></returns>
         [Post("/report/TRcInventoryDetail/AddScanDetail")]
         Task<ItemResult<TRcInventoryReadModel>> AddScanDetail(string bayId = null, string planNo = null, string materialNo = null);
 
-        /// <summary>
-        /// 完成盘库
-        /// </summary>
-        /// <returns></returns>
         [Post("/report/TRcInventoryDetail/AddNotScanDetail")]
         Task<List<TRcInventoryDetailReadModel>> AddNotScanDetail(string bayId = null, string planNo = null);
 
-        /// <summary>
-        /// 生成盘库报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcInventoryDetail/DownReportExcel")]
         Task DownReportExcel(string bayCode = null, string planNo = null);
 
-        /// <summary>
-        /// 生成盘库Pdf报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcInventoryDetail/CreateReportPdf")]
         Task CreateReportPdf(string bayCode = null, string planNo = null);
 
@@ -56,7 +36,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcInventoryDetailUpdateModel updateModel);
 
         [Delete("/report/TRcInventoryDetail/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcInventoryDetail/Get/{id}")]
         Task<TRcInventoryDetailReadModel> Get(string id);

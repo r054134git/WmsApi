@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface IVProductionMaterialApi
+    public partial interface IVProductionMaterialApi
     {
         [Post("/plan/VProductionMaterial/Create")]
         Task<OperationResult> Create([Body] VProductionMaterialCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] VProductionMaterialUpdateModel updateModel);
 
         [Delete("/plan/VProductionMaterial/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/VProductionMaterial/Get/{id}")]
         Task<VProductionMaterialReadModel> Get(string id);

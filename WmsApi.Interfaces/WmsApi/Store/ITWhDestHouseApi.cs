@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhDestHouseApi
+    public partial interface ITWhDestHouseApi
     {
         [Post("/store/TWhDestHouse/Create")]
         Task<OperationResult> Create([Body] TWhDestHouseCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhDestHouseUpdateModel updateModel);
 
         [Delete("/store/TWhDestHouse/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhDestHouse/Get/{id}")]
         Task<TWhDestHouseReadModel> Get(string id);

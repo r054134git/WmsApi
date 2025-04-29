@@ -292,6 +292,22 @@ namespace WmsApi.Domain
         public virtual DbSet<WmsApi.Domain.Entities.TPlTruckLoadList> TPlTruckLoadLists { get; set; }
 
         /// <summary>
+        /// Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TPlTruckQueueInBayOut"/>.
+        /// </summary>
+        /// <value>
+        /// The <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TPlTruckQueueInBayOut"/>.
+        /// </value>
+        public virtual DbSet<WmsApi.Domain.Entities.TPlTruckQueueInBayOut> TPlTruckQueueInBayOuts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TPlTruckQueueInBayShift"/>.
+        /// </summary>
+        /// <value>
+        /// The <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TPlTruckQueueInBayShift"/>.
+        /// </value>
+        public virtual DbSet<WmsApi.Domain.Entities.TPlTruckQueueInBayShift> TPlTruckQueueInBayShifts { get; set; }
+
+        /// <summary>
         /// Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TPlTruckTransfer"/>.
         /// </summary>
         /// <value>
@@ -450,6 +466,14 @@ namespace WmsApi.Domain
         /// The <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TRcTruckLoadingLog"/>.
         /// </value>
         public virtual DbSet<WmsApi.Domain.Entities.TRcTruckLoadingLog> TRcTruckLoadingLogs { get; set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TRcTruck"/>.
+        /// </summary>
+        /// <value>
+        /// The <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TRcTruck"/>.
+        /// </value>
+        public virtual DbSet<WmsApi.Domain.Entities.TRcTruck> TRcTrucks { get; set; }
 
         /// <summary>
         /// Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> that can be used to query and save instances of <see cref="WmsApi.Domain.Entities.TRcWorkMode"/>.
@@ -998,6 +1022,8 @@ namespace WmsApi.Domain
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckDeliveryMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckLoadListDetailMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckLoadListMap());
+            modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckQueueInBayOutMap());
+            modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckQueueInBayShiftMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TPlTruckTransferMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcBayMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcCameraIdsMap());
@@ -1018,6 +1044,7 @@ namespace WmsApi.Domain
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcTrainNodeMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcTruckBayQueueMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcTruckLoadingLogMap());
+            modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcTruckMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRcWorkModeMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRlCranePlanTypeMap());
             modelBuilder.ApplyConfiguration(new WmsApi.Domain.Mapping.TRlDispatchRulesMap());

@@ -7,17 +7,13 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlBackReturnApi
+    public partial interface ITPlBackReturnApi
     {
         [Post("/plan/TPlBackReturn/Create")]
         Task<OperationResult> Create([Body] TPlBackReturnCreateModel createModel);
 
-        /// <summary>
-        /// 退库计划删除
-        /// </summary>
-        /// <returns></returns>
         [Delete("/plan/TPlBackReturn/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlBackReturn/CheckLocation")]
         Task<OperationResult> CheckLocation(string retLocation = null);

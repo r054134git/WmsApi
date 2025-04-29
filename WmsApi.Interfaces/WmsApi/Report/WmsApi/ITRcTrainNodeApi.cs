@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcTrainNodeApi
+    public partial interface ITRcTrainNodeApi
     {
         [Post("/report/TRcTrainNode/Create")]
         Task<OperationResult> Create([Body] TRcTrainNodeCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcTrainNodeUpdateModel updateModel);
 
         [Delete("/report/TRcTrainNode/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcTrainNode/Get/{id}")]
         Task<TRcTrainNodeReadModel> Get(string id);

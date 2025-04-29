@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScClientApi
+    public partial interface ITScClientApi
     {
         [Post("/admin/TScClient/Create")]
         Task<OperationResult> Create([Body] TScClientCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TScClientUpdateModel updateModel);
 
         [Delete("/admin/TScClient/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TScClient/Get/{id}")]
         Task<TScClientReadModel> Get(string id);

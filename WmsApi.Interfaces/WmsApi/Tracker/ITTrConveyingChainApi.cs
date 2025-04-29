@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrConveyingChainApi
+    public partial interface ITTrConveyingChainApi
     {
         [Post("/tracker/TTrConveyingChain/Create")]
         Task<OperationResult> Create([Body] TTrConveyingChainCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrConveyingChainUpdateModel updateModel);
 
         [Delete("/tracker/TTrConveyingChain/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrConveyingChain/Get/{id}")]
         Task<TTrConveyingChainReadModel> Get(string id);

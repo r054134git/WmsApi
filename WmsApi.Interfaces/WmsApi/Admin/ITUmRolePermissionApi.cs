@@ -7,21 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmRolePermissionApi
+    public partial interface ITUmRolePermissionApi
     {
-        /// <summary>
-        /// 获取所有的菜单列表
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TUmRolePermission/GetAllListQuery")]
         Task<PageResult<TUmMenuReadModel>> GetAllListQuery(string roleId = null);
 
-        /// <summary>
-        /// 获取所有的菜单列表
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Post("/admin/TUmRolePermission/AddRolePermissonList")]
         Task<PageResult<TUmMenuReadModel>> AddRolePermissonList([Body] string[] permissions, string roleId = null);
 
@@ -32,7 +22,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmRolePermissionUpdateModel updateModel);
 
         [Delete("/admin/TUmRolePermission/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmRolePermission/Get/{id}")]
         Task<TUmRolePermissionReadModel> Get(string id);

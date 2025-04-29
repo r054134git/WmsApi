@@ -7,14 +7,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlLocationAssignApi
+    public partial interface ITRlLocationAssignApi
     {
-        /// <summary>
-        /// 更改规则开关
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Put("/admin/TRlLocationAssign/UpdateAssign")]
         Task<OperationResult> UpdateAssign(string id = null);
 
@@ -25,7 +19,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TRlLocationAssignUpdateModel updateModel);
 
         [Delete("/admin/TRlLocationAssign/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlLocationAssign/Get/{id}")]
         Task<TRlLocationAssignReadModel> Get(string id);

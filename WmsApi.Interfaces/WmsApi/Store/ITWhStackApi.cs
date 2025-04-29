@@ -9,32 +9,19 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhStackApi
+    public partial interface ITWhStackApi
     {
         [Get("/store/TWhStack/GetListOfArea")]
         Task<PageResult<TWhStackReadModel>> GetListOfArea(string areaId = null, StackTypes? stackType = null);
 
         [Get("/store/TWhStack/GetListOfAreaList")]
-        Task<PageResult<TWhStackReadModel>> GetListOfAreaList([Query] string[] areaIds = null);
+        Task<PageResult<TWhStackReadModel>> GetListOfAreaList(string[] areaIds = null);
 
         [Get("/store/TWhStack/GetListOfBay")]
         Task<PageResult<TWhStackReadModel>> GetListOfBay(string bayId = null, StackTypes? stackType = null);
 
-        /// <summary>
-        /// 垛位筛选
-        /// </summary>
-        /// <param name="pageParam"></param>
-        /// <param name="bayId"></param>
-        /// <param name="ownerId"></param>
-        /// <param name="orientation"></param>
-        /// <param name="type"></param>
-        /// <param name="isLockable"></param>
-        /// <param name="loadOrder"></param>
-        /// <param name="isEnable"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/store/TWhStack/GetPageQuery")]
-        Task<PageResult<TWhStackReadModel>> GetPageQuery(int? current = null, int? pageSize = null, [Query] string[] bayId = null, [Query] string[] ownerId = null, [Query] int[] orientation = null, [Query] int[] type = null, [Query] int?[] isLockable = null, [Query] int[] loadOrder = null, [Query] int?[] isEnable = null);
+        Task<PageResult<TWhStackReadModel>> GetPageQuery(int? current = null, int? pageSize = null, string[] bayId = null, string[] ownerId = null, int[] orientation = null, int[] type = null, int?[] isLockable = null, int[] loadOrder = null, int?[] isEnable = null);
 
         [Post("/store/TWhStack/Create")]
         Task<OperationResult> Create([Body] TWhStackCreateModel createModel);
@@ -43,7 +30,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhStackUpdateModel updateModel);
 
         [Delete("/store/TWhStack/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhStack/Get/{id}")]
         Task<TWhStackReadModel> Get(string id);

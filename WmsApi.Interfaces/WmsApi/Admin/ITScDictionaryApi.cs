@@ -7,23 +7,14 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScDictionaryApi
+    public partial interface ITScDictionaryApi
     {
-        /// <summary>
-        /// 获取所有owner为空（即字典分类）的数据列表
-        /// </summary>
-        /// <param name="ownerValue"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TScDictionary/GetAllClassList")]
         Task<PageResult<TScDictionaryReadModel>> GetAllClassList();
 
         [Get("/admin/TScDictionary/GetListQuery")]
-        Task<PageResult<TScDictionaryReadModel>> GetListQuery([Query] string[] ownerValue = null);
+        Task<PageResult<TScDictionaryReadModel>> GetListQuery(string[] ownerValue = null);
 
-        /// <summary>
-        /// 各库产线列表
-        /// </summary>
         [Get("/admin/TScDictionary/GetChainPage")]
         Task<PageResult<TScDictionaryReadModel>> GetChainPage(string bayName = null);
 
@@ -34,7 +25,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TScDictionaryUpdateModel updateModel);
 
         [Delete("/admin/TScDictionary/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TScDictionary/Get/{id}")]
         Task<TScDictionaryReadModel> Get(string id);

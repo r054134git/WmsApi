@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Equip
 {
-    public interface ITEqWalkingBeamApi
+    public partial interface ITEqWalkingBeamApi
     {
         [Post("/equip/TEqWalkingBeam/Create")]
         Task<OperationResult> Create([Body] TEqWalkingBeamCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Equip
         Task<OperationResult> Update(string id, [Body] TEqWalkingBeamUpdateModel updateModel);
 
         [Delete("/equip/TEqWalkingBeam/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/equip/TEqWalkingBeam/Get/{id}")]
         Task<TEqWalkingBeamReadModel> Get(string id);

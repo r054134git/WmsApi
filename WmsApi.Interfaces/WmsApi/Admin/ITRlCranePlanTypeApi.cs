@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlCranePlanTypeApi
+    public partial interface ITRlCranePlanTypeApi
     {
         [Put("/admin/TRlCranePlanType/Update/{id}")]
         Task<OperationResult> Update(string id, [Body] TRlCranePlanTypeUpdateModel updateModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Create([Body] TRlCranePlanTypeCreateModel createModel);
 
         [Delete("/admin/TRlCranePlanType/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlCranePlanType/Get/{id}")]
         Task<TRlCranePlanTypeReadModel> Get(string id);

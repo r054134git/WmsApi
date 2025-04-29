@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcMaterialApi
+    public partial interface ITRcMaterialApi
     {
         [Post("/report/TRcMaterial/Create")]
         Task<OperationResult> Create([Body] TRcMaterialCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcMaterialUpdateModel updateModel);
 
         [Delete("/report/TRcMaterial/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcMaterial/Get/{id}")]
         Task<TRcMaterialReadModel> Get(string id);

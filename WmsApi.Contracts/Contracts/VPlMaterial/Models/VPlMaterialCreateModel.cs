@@ -1002,6 +1002,33 @@ namespace WmsApi.Contracts.Models
         public int? Type { get; set; }
 
         /// <summary>
+        /// Gets or sets the property value for 'LocationId'.
+        /// '库位ID'.
+        /// </summary>
+        /// <value>
+        /// The property value for 'LocationId'.
+        /// </value>
+        public string LocationId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value for 'PointX'.
+        /// '与基准点的相对坐标X(单位:m)'.
+        /// </summary>
+        /// <value>
+        /// The property value for 'PointX'.
+        /// </value>
+        public decimal? PointX { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value for 'PointY'.
+        /// '与基准点的相对坐标Y(单位:m)'.
+        /// </summary>
+        /// <value>
+        /// The property value for 'PointY'.
+        /// </value>
+        public decimal? PointY { get; set; }
+
+        /// <summary>
         /// Gets or sets the property value for 'LocationName'.
         /// '库位名称'.
         /// </summary>

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlTruckDeliveryApi
+    public partial interface ITPlTruckDeliveryApi
     {
         [Post("/plan/TPlTruckDelivery/Create")]
         Task<OperationResult> Create([Body] TPlTruckDeliveryCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlTruckDeliveryUpdateModel updateModel);
 
         [Delete("/plan/TPlTruckDelivery/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlTruckDelivery/Get/{id}")]
         Task<TPlTruckDeliveryReadModel> Get(string id);

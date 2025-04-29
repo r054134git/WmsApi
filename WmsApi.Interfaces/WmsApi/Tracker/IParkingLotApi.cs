@@ -7,59 +7,26 @@ using WmsApi.Contracts;
 
 namespace WmsApi.Tracker
 {
-    public interface IParkingLotApi
+    public partial interface IParkingLotApi
     {
-        /// <summary>
-        /// 车辆预进厂数据推送
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/CarPreInPush")]
         Task CarPreInPush();
 
-        /// <summary>
-        /// 车辆预出厂数据推送
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/CarPreOutPush")]
         Task CarPreOutPush();
 
-        /// <summary>
-        /// 车辆确认出厂数据推送
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/CarOutConfirmPush")]
         Task CarOutConfirmPush();
 
-        /// <summary>
-        /// 开关类型，1：开，2：关，3：停止，4：常开，5：常闭
-        /// </summary>
-        /// <param name="para"></param>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/GateControl")]
         Task<OperationResult> GateControl([Body] GateControlParas para);
 
-        /// <summary>
-        /// 开关类型，1：开，2：关，3：停止，4：常开，5：常闭
-        /// </summary>
-        /// <param name="gateId"></param>
-        /// <param name="type">开关类型，1：开，2：关，3：停止，4：常开，5：常闭</param>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/GateOpenOrClose")]
         Task<OperationResult> GateOpenOrClose(string gateId = null, int? type = null);
 
-        /// <summary>
-        /// 16库通过plc控制道闸，1：开，2：关
-        /// </summary>
-        /// <param name="gateId"></param>
-        /// <param name="type">1：开，2：关</param>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/GatePlcOpenOrClose")]
         Task<OperationResult> GatePlcOpenOrClose(string gateId = null, int? type = null);
 
-        /// <summary>
-        /// 摄像头报警推送
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/ParkingLot/CameraAlarmPush")]
         Task CameraAlarmPush();
     }

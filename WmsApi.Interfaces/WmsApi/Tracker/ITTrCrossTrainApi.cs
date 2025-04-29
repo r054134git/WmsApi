@@ -7,33 +7,17 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrCrossTrainApi
+    public partial interface ITTrCrossTrainApi
     {
-        /// <summary>
-        /// 各课过跨车
-        /// </summary>
-        /// <returns></returns>
         [Get("/tracker/TTrCrossTrain/GetCrossCar")]
         Task<TTrCrossTrainReadModel> GetCrossCar(string bayCode = null);
 
-        /// <summary>
-        /// 电瓶车信息
-        /// </summary>
-        /// <returns></returns>
         [Get("/tracker/TTrCrossTrain/GetElectronicVehicle")]
         Task<TTrCrossTrainReadModel> GetElectronicVehicle(string name = null);
 
-        /// <summary>
-        /// 更改过跨车锁定状态
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/TTrCrossTrain/UpdateIsLock")]
         Task<OperationResult> UpdateIsLock(string id = null, int? islock = null);
 
-        /// <summary>
-        /// 过跨车作业类型更改
-        /// </summary>
-        /// <returns></returns>
         [Put("/tracker/TTrCrossTrain/UpdateCrossTrainTaskType")]
         Task<OperationResult> UpdateCrossTrainTaskType(string name = null, int? type = null, string fromBay = null, string destBay = null);
 
@@ -44,7 +28,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrCrossTrainUpdateModel updateModel);
 
         [Delete("/tracker/TTrCrossTrain/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrCrossTrain/Get/{id}")]
         Task<TTrCrossTrainReadModel> Get(string id);

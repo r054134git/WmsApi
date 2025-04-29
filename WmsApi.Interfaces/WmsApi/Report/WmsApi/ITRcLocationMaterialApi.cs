@@ -7,54 +7,26 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcLocationMaterialApi
+    public partial interface ITRcLocationMaterialApi
     {
-        /// <summary>
-        /// 交接班统计
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/GetShiftList")]
-        Task<PageResult<ShiftModel>> GetShiftList([Query] string[] time = null);
+        Task<PageResult<ShiftModel>> GetShiftList(string[] time = null);
 
-        /// <summary>
-        /// 物料总量展示
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/GetMatSumList")]
-        Task<PageResult<TRcLocationMaterialReadModel>> GetMatSumList(int? current = null, int? pageSize = null, string bayid = null, [Query] string[] time = null);
+        Task<PageResult<TRcLocationMaterialReadModel>> GetMatSumList(int? current = null, int? pageSize = null, string bayid = null, string[] time = null);
 
-        /// <summary>
-        /// 锁定物料展示
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/GetLockMatSumList")]
-        Task<PageResult<TRcLocationMaterialReadModel>> GetLockMatSumList(int? current = null, int? pageSize = null, string bayid = null, [Query] string[] time = null);
+        Task<PageResult<TRcLocationMaterialReadModel>> GetLockMatSumList(int? current = null, int? pageSize = null, string bayid = null, string[] time = null);
 
-        /// <summary>
-        /// 排入运输指令的物料展示
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/GetCmdMatSumList")]
-        Task<PageResult<TRcLocationMaterialReadModel>> GetCmdMatSumList(int? current = null, int? pageSize = null, string bayid = null, [Query] string[] time = null);
+        Task<PageResult<TRcLocationMaterialReadModel>> GetCmdMatSumList(int? current = null, int? pageSize = null, string bayid = null, string[] time = null);
 
-        /// <summary>
-        /// 生成物料相关报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/CreateMatReportExcel")]
         Task CreateMatReportExcel(string time = null, string end = null, string type = null, string reportName = null);
 
-        /// <summary>
-        /// 交接班库存差异统计
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/GetDiverList")]
-        Task<PageResult<ShiftModel>> GetDiverList([Query] string[] time = null);
+        Task<PageResult<ShiftModel>> GetDiverList(string[] time = null);
 
-        /// <summary>
-        /// 生成库存差异报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcLocationMaterial/CreateDiverReportExcel")]
         Task CreateDiverReportExcel(string time = null, string end = null, string reportName = null);
 
@@ -65,7 +37,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcLocationMaterialUpdateModel updateModel);
 
         [Delete("/report/TRcLocationMaterial/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcLocationMaterial/Get/{id}")]
         Task<TRcLocationMaterialReadModel> Get(string id);

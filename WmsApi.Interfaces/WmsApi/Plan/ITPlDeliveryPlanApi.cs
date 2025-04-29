@@ -9,17 +9,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlDeliveryPlanApi
+    public partial interface ITPlDeliveryPlanApi
     {
-        /// <summary>
-        /// 备料，发货量统计
-        /// </summary>
         [Get("/plan/TPlDeliveryPlan/GetMpAnalysis")]
         Task<MpStatModels> GetMpAnalysis(string pHouse = null, string planDate = null);
 
-        /// <summary>
-        /// 备料占比订单
-        /// </summary>
         [Get("/plan/TPlDeliveryPlan/GetPlanMaterialPercentOrder")]
         Task<List<MpStatModelAllBay>> GetPlanMaterialPercentOrder(string pHouse = null, string planDate = null, string percent = null);
 
@@ -30,7 +24,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlDeliveryPlanUpdateModel updateModel);
 
         [Delete("/plan/TPlDeliveryPlan/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlDeliveryPlan/Get/{id}")]
         Task<TPlDeliveryPlanReadModel> Get(string id);

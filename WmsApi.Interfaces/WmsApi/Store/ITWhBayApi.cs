@@ -8,13 +8,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhBayApi
+    public partial interface ITWhBayApi
     {
-        /// <summary>
-        /// 获取所有的跨列表
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/store/TWhBay/GetAllList")]
         Task<PageResult<TWhBayReadModel>> GetAllList();
 
@@ -31,7 +26,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhBayUpdateModel updateModel);
 
         [Delete("/store/TWhBay/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhBay/Get/{id}")]
         Task<TWhBayReadModel> Get(string id);

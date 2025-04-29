@@ -8,14 +8,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcWorkModeApi
+    public partial interface ITRcWorkModeApi
     {
-        /// <summary>
-        /// 自动手动作业时长
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcWorkMode/GetWorkModeList")]
-        Task<PageResult<WorkModel>> GetWorkModeList([Query] DateTime[] time = null);
+        Task<PageResult<WorkModel>> GetWorkModeList(DateTime[] time = null);
 
         [Post("/report/TRcWorkMode/Create")]
         Task<OperationResult> Create([Body] TRcWorkModeCreateModel createModel);
@@ -24,7 +20,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcWorkModeUpdateModel updateModel);
 
         [Delete("/report/TRcWorkMode/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcWorkMode/Get/{id}")]
         Task<TRcWorkModeReadModel> Get(string id);

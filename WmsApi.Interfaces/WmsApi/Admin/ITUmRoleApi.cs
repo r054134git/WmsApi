@@ -7,13 +7,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmRoleApi
+    public partial interface ITUmRoleApi
     {
-        /// <summary>
-        /// 获取所有的角色列表
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TUmRole/GetAllList")]
         Task<PageResult<TUmRoleReadModel>> GetAllList(string order = null);
 
@@ -24,7 +19,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmRoleUpdateModel updateModel);
 
         [Delete("/admin/TUmRole/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmRole/Get/{id}")]
         Task<TUmRoleReadModel> Get(string id);

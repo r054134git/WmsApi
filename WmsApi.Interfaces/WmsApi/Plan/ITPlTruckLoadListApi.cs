@@ -8,99 +8,50 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlTruckLoadListApi
+    public partial interface ITPlTruckLoadListApi
     {
-        /// <summary>
-        /// 移库/发货单列表
-        /// </summary>
         [Get("/plan/TPlTruckLoadList/GetAllLoadingNos_old")]
-        Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos_old(int? current = null, int? pageSize = null, string vehicleNo = null, [Query] int[] resolveState = null, [Query] string[] sourceHouse = null);
+        Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos_old(int? current = null, int? pageSize = null, string vehicleNo = null, int[] resolveState = null, string[] sourceHouse = null);
 
-        /// <summary>
-        /// 移库/发货单列表
-        /// </summary>
         [Get("/plan/TPlTruckLoadList/GetAllLoadingNos")]
         Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos(int? current = null, int? pageSize = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货 未挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/GetAllUnpicked_old")]
         Task<OperationResult<List<VPlMaterialReadModel>>> GetAllUnpicked_old(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 移库/发货 未挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/GetAllUnpicked")]
         Task<OperationResult<List<VPlMaterialReadModel>>> GetAllUnpicked(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货 已挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/GetAllPicked_old")]
         Task<PageResult<VPlMaterialReadModel>> GetAllPicked_old(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 移库/发货 已挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/GetAllPicked")]
         Task<PageResult<VPlMaterialReadModel>> GetAllPicked(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/Pick")]
         Task<OperationResult> Pick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string materialNo = null);
 
-        /// <summary>
-        /// 移库/发货挑库取消
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/Unpick")]
         Task<OperationResult> Unpick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string materialNo = null);
 
-        /// <summary>
-        /// 一键整车入库
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/CarloadIn")]
         Task<OperationResult> CarloadIn(string vehicleNo = null, string mainTruckLoadingNo = null);
 
-        /// <summary>
-        /// 移库/发货出库确认
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/Confirm")]
         Task<OperationResult> Confirm(string vehicleNo = null, string mainTruckLoadingNo = null, string sourceHouse = null);
 
-        /// <summary>
-        /// 移库/发货出库撤销
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/Cancel")]
         Task<OperationResult> Cancel(string vehicleNo = null, string mainTruckLoadingNo = null, string sourceHouse = null);
 
-        /// <summary>
-        /// 按主装单号查询已预挑/已挑库卷信息
-        /// </summary>
-        /// <param name="truckLoadingNo"></param>
-        /// <param name="pickState"></param>
-        /// <returns></returns>
         [Get("/plan/TPlTruckLoadList/GetAllLoadInfo")]
         Task<List<HoldPickModel>> GetAllLoadInfo(string truckLoadingNo = null, int? pickState = null);
 
-        /// <summary>
-        /// 手持挑库
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlTruckLoadList/UpdateCoilPick")]
         Task<OperationResult<TPlTruckLoadListReadModel>> UpdateCoilPick(string materialNo = null, string account = null, string orderNo = null, string vehicleNo = null, bool pick = false);
 
-        /// <summary>
-        /// 手持出库确认
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/HoldConfirm")]
         Task<OperationResult> HoldConfirm(string mainTruckLoadingNo = null, string sourceHouse = null);
 
-        /// <summary>
-        /// 手持出库确认
-        /// </summary>
         [Post("/plan/TPlTruckLoadList/ConfirmOutStore")]
         Task<OperationResult> ConfirmOutStore(string bayCode = null, string vehicleNo = null, string mainTruckLoadingNo = null);
 
@@ -111,7 +62,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlTruckLoadListUpdateModel updateModel);
 
         [Delete("/plan/TPlTruckLoadList/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlTruckLoadList/Get/{id}")]
         Task<TPlTruckLoadListReadModel> Get(string id);

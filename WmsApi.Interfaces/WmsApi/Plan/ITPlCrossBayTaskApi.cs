@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlCrossBayTaskApi
+    public partial interface ITPlCrossBayTaskApi
     {
         [Post("/plan/TPlCrossBayTask/Create")]
         Task<OperationResult> Create([Body] TPlCrossBayTaskCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlCrossBayTaskUpdateModel updateModel);
 
         [Delete("/plan/TPlCrossBayTask/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlCrossBayTask/Get/{id}")]
         Task<TPlCrossBayTaskReadModel> Get(string id);

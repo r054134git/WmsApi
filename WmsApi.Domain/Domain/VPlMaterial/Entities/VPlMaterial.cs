@@ -1065,6 +1065,33 @@ namespace WmsApi.Domain.Entities
         public int? Type { get; set; }
 
         /// <summary>
+        /// Gets or sets the property value representing column 'LOCATION_ID'.
+        /// '库位ID'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'LOCATION_ID'.
+        /// </value>
+        public string LocationId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'POINT_X'.
+        /// '与基准点的相对坐标X(单位:m)'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'POINT_X'.
+        /// </value>
+        public decimal? PointX { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'POINT_Y'.
+        /// '与基准点的相对坐标Y(单位:m)'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'POINT_Y'.
+        /// </value>
+        public decimal? PointY { get; set; }
+
+        /// <summary>
         /// Gets or sets the property value representing column 'LOCATION_NAME'.
         /// '库位名称'.
         /// </summary>

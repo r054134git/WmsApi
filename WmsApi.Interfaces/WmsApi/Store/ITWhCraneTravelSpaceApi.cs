@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhCraneTravelSpaceApi
+    public partial interface ITWhCraneTravelSpaceApi
     {
         [Put("/store/TWhCraneTravelSpace/UpdateTravelSpace")]
         Task<OperationResult<TWhCraneTravelSpaceReadModel>> UpdateTravelSpace(string bayId = null, string id = null, int? isEnable = null);
@@ -22,7 +22,7 @@ namespace WmsApi.Store
         Task<OperationResult> Update(string id, [Body] TWhCraneTravelSpaceUpdateModel updateModel);
 
         [Delete("/store/TWhCraneTravelSpace/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhCraneTravelSpace/Get/{id}")]
         Task<TWhCraneTravelSpaceReadModel> Get(string id);

@@ -9,239 +9,110 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface IDashboardApi
+    public partial interface IDashboardApi
     {
-        /// <summary>
-        /// 月（30天）入库曲线
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneInbound")]
         Task<PageResult<int>> GetCraneInbound(string bayId = null);
 
-        /// <summary>
-        /// 月（30天）出库曲线
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneOutbound")]
         Task<PageResult<int>> GetCraneOutbound(string bayId = null);
 
-        /// <summary>
-        /// 一层，二层垛位钢卷数量
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetStackNum")]
         Task<PageResult<StackNumModel>> GetStackNum(string bayId = null, int? floor = null);
 
-        /// <summary>
-        /// 班组实时信息
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetGroup")]
         Task<PageResult<List<int>>> GetGroup(string bayId = null);
 
-        /// <summary>
-        /// 待调运任务统计
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneTask")]
         Task<PageResult<TPlBayReadModel>> GetCraneTask(string bayId = null);
 
-        /// <summary>
-        /// 任务实时统计
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetDayTask")]
         Task<PageResult<double>> GetDayTask(string bayId = null);
 
-        /// <summary>
-        /// 库存钢卷宽度
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialWidth")]
         Task<PageResult<StackNumModel>> GetMaterialWidth(string bayId = null);
 
-        /// <summary>
-        /// 在库时间
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialInTime")]
         Task<PageResult<StackNumModel>> GetMaterialInTime(string bayId = null);
 
-        /// <summary>
-        /// 中间行车大屏
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetSlabModel")]
         Task<PageResult<TTrLocationMaterialReadModel>> GetSlabModel(string bayId = null);
 
-        /// <summary>
-        /// 中间行车大屏鞍座
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetSlabModelAz")]
         Task<PageResult<TTrLocationMaterialReadModel>> GetSlabModelAz(string bayId = null);
 
-        /// <summary>
-        /// 大小车移动速度
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneSpeed")]
         Task<PageResult<CraneSpeed>> GetCraneSpeed(string bayId = null);
 
-        /// <summary>
-        /// 自动作业比例查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetBIList")]
-        Task<PageResult<BLModel>> GetBIList(int? current = null, int? pageSize = null, [Query] string[] time = null);
+        Task<PageResult<BLModel>> GetBIList(int? current = null, int? pageSize = null, string[] time = null);
 
-        /// <summary>
-        /// 自动作业比例详情查询
-        /// </summary>
-        /// <returns></returns>
+        [Get("/report/Dashboard/GetBIListNew")]
+        Task<PageResult<BLModel>> GetBIListNew(int? current = null, int? pageSize = null, string[] time = null);
+
         [Get("/report/Dashboard/GetBIListDetail")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetBIListDetail(int? current = null, int? pageSize = null, string bayId = null, string type = null, [Query] string[] time = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetBIListDetail(int? current = null, int? pageSize = null, string bayId = null, string type = null, string[] time = null);
 
         [Get("/report/Dashboard/GetBIListDetailCommon")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetBIListDetailCommon(string bayId = null, string type = null, [Query] string[] time = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetBIListDetailCommon(string bayId = null, string type = null, string[] time = null);
 
-        /// <summary>
-        /// 生成交接班报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetClassListExcel")]
-        Task GetClassListExcel(string house = null, string bayCode = null, [Query] string[] time = null);
+        Task GetClassListExcel(string house = null, string bayCode = null, string[] time = null);
 
-        /// <summary>
-        /// 生成生产报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetProduceExcel")]
         Task GetProduceExcel();
 
-        /// <summary>
-        /// 生成行车统计报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneListExcel")]
-        Task GetCraneListExcel(string bayCode = null, [Query] string[] time = null);
+        Task GetCraneListExcel(string bayCode = null, string[] time = null);
 
-        /// <summary>
-        /// 生成报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetBIListDetailExcel")]
-        Task GetBIListDetailExcel(string bayId = null, string type = null, [Query] string[] time = null);
+        Task GetBIListDetailExcel(string bayId = null, string type = null, string[] time = null);
 
-        /// <summary>
-        /// 自动作业比例下载
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetBIListCommon")]
-        Task<PageResult<BLModel>> GetBIListCommon(string baycode = null, [Query] string[] time = null);
+        Task<PageResult<BLModel>> GetBIListCommon(string baycode = null, string[] time = null);
 
-        /// <summary>
-        /// 生成报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/CreateReportExcelHour")]
-        Task CreateReportExcelHour(string baycode = null, [Query] string[] time = null);
+        Task CreateReportExcelHour(string baycode = null, string[] time = null);
 
-        /// <summary>
-        /// 自动作业比例下载  间隔24小时
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetBIListCommonDay2")]
-        Task<PageResult<BLModel>> GetBIListCommonDay2(string baycode = null, [Query] string[] time = null);
+        Task<PageResult<BLModel>> GetBIListCommonDay2(string baycode = null, string[] time = null);
 
-        /// <summary>
-        /// 自动作业比例下载 间隔12小时
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetBIListCommonDay")]
-        Task<PageResult<BLModel>> GetBIListCommonDay(string baycode = null, [Query] string[] time = null);
+        Task<PageResult<BLModel>> GetBIListCommonDay(string baycode = null, string[] time = null);
 
-        /// <summary>
-        /// 生成报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/CreateReportExcelDay")]
-        Task CreateReportExcelDay(string baycode = null, [Query] string[] time = null);
+        Task CreateReportExcelDay(string baycode = null, string[] time = null);
 
-        /// <summary>
-        /// 虚拟卷查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialVirtual")]
         Task<PageResult<MaterialVirtualModel>> GetMaterialVirtual(int? current = null, int? pageSize = null);
 
-        /// <summary>
-        /// 虚拟卷详情查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialVirtualDetail")]
         Task<PageResult<TTrLocationMaterialReadModel>> GetMaterialVirtualDetail(string bayId = null);
 
-        /// <summary>
-        /// 手包完成查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialHandBag")]
-        Task<PageResult<VPlMaterialReadModel>> GetMaterialHandBag(int? current = null, int? pageSize = null, [Query] string[] bayCode = null);
+        Task<PageResult<VPlMaterialReadModel>> GetMaterialHandBag(int? current = null, int? pageSize = null, string[] bayCode = null);
 
-        /// <summary>
-        /// 手包完成下载
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialHandBagCommon")]
-        Task<PageResult<VPlMaterialReadModel>> GetMaterialHandBagCommon([Query] string[] bayCode = null);
+        Task<PageResult<VPlMaterialReadModel>> GetMaterialHandBagCommon(string[] bayCode = null);
 
-        /// <summary>
-        /// 手包完成下载
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetMaterialHandBagExcel")]
-        Task GetMaterialHandBagExcel([Query] string[] bayCode = null);
+        Task GetMaterialHandBagExcel(string[] bayCode = null);
 
-        /// <summary>
-        /// 推送消息
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetWebsocket")]
         Task<PageResult<BLModel>> GetWebsocket(string message = null);
 
-        /// <summary>
-        /// 推送消息
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/PrePickConfirm")]
         Task<PageResult<AutoPrePickConfirm>> PrePickConfirm(string message = null);
 
-        /// <summary>
-        /// 推送消息
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/PrePickConfirm2")]
         Task<PageResult<AutoPrePickConfirm>> PrePickConfirm2(string message = null);
 
-        /// <summary>
-        /// 推送消息
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/PrePickConfirm3")]
         Task<PageResult<AutoPrePickConfirm>> PrePickConfirm3(string messageInfo = null);
 
-        /// <summary>
-        /// 当日吊运任务
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetDbTj")]
         Task<PageResult<PlanTaskModel>> GetDbTj(string bayId = null);
 
-        /// <summary>
-        /// 当日吊运任务
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetDbTjBC")]
         Task<PageResult<List<int>>> GetDbTjBC(string bayId = null);
 
@@ -251,38 +122,18 @@ namespace WmsApi.Report.WmsApi
         [Get("/report/Dashboard/Is2andBy1FloorAvaliable111")]
         Task<bool> Is2andBy1FloorAvaliable111();
 
-        /// <summary>
-        /// （日）自动曲线
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetAuto1list")]
         Task<PageResult<int>> GetAuto1list(string bayCode = null, string time = null);
 
-        /// <summary>
-        /// （日）入库自动曲线
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetAuto2list")]
         Task<PageResult<int>> GetAuto2list(string bayCode = null, string time = null);
 
-        /// <summary>
-        /// （日）出库自动曲线
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetAuto3list")]
         Task<PageResult<int>> GetAuto3list(string bayCode = null, string time = null);
 
-        /// <summary>
-        /// 当日吊运任务
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCraneTaskTime")]
         Task<PageResult<int>> GetCraneTaskTime(string bayName = null);
 
-        /// <summary>
-        /// 当日吊运计划时间
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/Dashboard/GetCranePlanTime")]
         Task<PageResult<int>> GetCranePlanTime(string bayName = null, string type = null);
 

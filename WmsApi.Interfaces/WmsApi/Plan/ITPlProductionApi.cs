@@ -7,11 +7,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlProductionApi
+    public partial interface ITPlProductionApi
     {
-        /// <summary>
-        /// 查询计划上料的物料信息
-        /// </summary>
         [Post("/plan/TPlProduction/GetPlanDetails")]
         Task<PageResult<TPlProductionDetailReadModel>> GetPlanDetails(string planNo = null);
 
@@ -22,7 +19,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlProductionUpdateModel updateModel);
 
         [Delete("/plan/TPlProduction/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlProduction/Get/{id}")]
         Task<TPlProductionReadModel> Get(string id);

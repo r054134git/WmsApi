@@ -8,17 +8,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScTransferSpecApi
+    public partial interface ITScTransferSpecApi
     {
-        /// <summary>
-        /// 宽度/左侧
-        /// </summary>
         [Post("/admin/TScTransferSpec/GetAllTransferSpecLeft")]
         Task<OperationResult<List<TScTransferSpecReadModel>>> GetAllTransferSpecLeft(int? belongSpecWidth = null);
 
-        /// <summary>
-        /// 宽度/右侧
-        /// </summary>
         [Post("/admin/TScTransferSpec/GetAllTransferSpecRight")]
         Task<OperationResult<List<TScTransferSpecReadModel>>> GetAllTransferSpecRight(int? belongSpecWidth = null, int? specWidth = null);
 
@@ -29,7 +23,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TScTransferSpecUpdateModel updateModel);
 
         [Delete("/admin/TScTransferSpec/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TScTransferSpec/Get/{id}")]
         Task<TScTransferSpecReadModel> Get(string id);

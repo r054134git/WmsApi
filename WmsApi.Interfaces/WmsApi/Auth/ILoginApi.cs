@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Auth
 {
-    public interface ILoginApi
+    public partial interface ILoginApi
     {
         [Post("/auth/Login/Login")]
         Task<LoginResultModel> Login(string userName = null, string password = null);
@@ -19,7 +19,7 @@ namespace WmsApi.Auth
         Task<OperationResult> Update(string id, [Body] TUmUserUpdateModel updateModel);
 
         [Delete("/auth/Login/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/auth/Login/Get/{id}")]
         Task<TUmUserReadModel> Get(string id);

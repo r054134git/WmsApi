@@ -7,14 +7,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcCraneTaskApi
+    public partial interface ITRcCraneTaskApi
     {
-        /// <summary>
-        /// 行车作业比例
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcCraneTask/GetCranePercent")]
-        Task<PageResult<CraneModel>> GetCranePercent(int? current = null, int? pageSize = null, [Query] string[] bayId = null, [Query] string[] time = null);
+        Task<PageResult<CraneModel>> GetCranePercent(int? current = null, int? pageSize = null, string[] bayId = null, string[] time = null);
 
         [Post("/report/TRcCraneTask/Create")]
         Task<OperationResult> Create([Body] TRcCraneTaskCreateModel createModel);
@@ -23,7 +19,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcCraneTaskUpdateModel updateModel);
 
         [Delete("/report/TRcCraneTask/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcCraneTask/Get/{id}")]
         Task<TRcCraneTaskReadModel> Get(string id);

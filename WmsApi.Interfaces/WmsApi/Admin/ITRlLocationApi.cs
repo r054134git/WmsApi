@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlLocationApi
+    public partial interface ITRlLocationApi
     {
         [Post("/admin/TRlLocation/Create")]
         Task<OperationResult> Create([Body] TRlLocationCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TRlLocationUpdateModel updateModel);
 
         [Delete("/admin/TRlLocation/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlLocation/Get/{id}")]
         Task<TRlLocationReadModel> Get(string id);

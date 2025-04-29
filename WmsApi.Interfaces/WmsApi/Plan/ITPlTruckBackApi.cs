@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlTruckBackApi
+    public partial interface ITPlTruckBackApi
     {
         [Post("/plan/TPlTruckBack/Create")]
         Task<OperationResult> Create([Body] TPlTruckBackCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlTruckBackUpdateModel updateModel);
 
         [Delete("/plan/TPlTruckBack/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlTruckBack/Get/{id}")]
         Task<TPlTruckBackReadModel> Get(string id);

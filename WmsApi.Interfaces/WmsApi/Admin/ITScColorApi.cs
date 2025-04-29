@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScColorApi
+    public partial interface ITScColorApi
     {
         [Post("/admin/TScColor/Create")]
         Task<OperationResult> Create([Body] TScColorCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TScColorUpdateModel updateModel);
 
         [Delete("/admin/TScColor/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TScColor/Get/{id}")]
         Task<TScColorReadModel> Get(string id);

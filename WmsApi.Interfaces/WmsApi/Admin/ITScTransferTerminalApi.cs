@@ -8,34 +8,25 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScTransferTerminalApi
+    public partial interface ITScTransferTerminalApi
     {
         [Post("/admin/TScTransferTerminal/UpdateList")]
-        Task<OperationResult> UpdateList([Query] string[] ids = null, string cityName = null, int? operateType = null);
+        Task<OperationResult> UpdateList(string[] ids = null, string cityName = null, int? operateType = null);
 
         [Delete("/admin/TScTransferTerminal/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
-        /// <summary>
-        /// 码头/左侧
-        /// </summary>
         [Post("/admin/TScTransferTerminal/GetAllTransferSpecLeft")]
         Task<PageResult<TScTransferTerminalReadModel>> GetAllTransferSpecLeft(int? current = null, int? pageSize = null, string cityName = null, int? isEnable = null);
 
-        /// <summary>
-        /// 码头/右侧
-        /// </summary>
         [Post("/admin/TScTransferTerminal/GetAllTransferSpecRight")]
         Task<OperationResult<List<TScTransferTerminalReadModel>>> GetAllTransferSpecRight(string belongCityName = null);
 
-        /// <summary>
-        /// 查询码头名称
-        /// </summary>
         [Get("/admin/TScTransferTerminal/GetCodeName")]
         Task<TScTransferTerminalReadModel> GetCodeName(string code = null);
 
         [Post("/admin/TScTransferTerminal/UpdateListIsEnable")]
-        Task<OperationResult> UpdateListIsEnable([Query] string[] ids = null, int? isEnable = null);
+        Task<OperationResult> UpdateListIsEnable(string[] ids = null, int? isEnable = null);
 
         [Post("/admin/TScTransferTerminal/Create")]
         Task<OperationResult> Create([Body] TScTransferTerminalCreateModel createModel);

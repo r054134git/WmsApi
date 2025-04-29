@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrTrafficLightApi
+    public partial interface ITTrTrafficLightApi
     {
         [Post("/tracker/TTrTrafficLight/UpdateTrafficLight")]
         Task<OperationResult> UpdateTrafficLight(string name = null, int? type = null);
@@ -19,7 +19,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrTrafficLightUpdateModel updateModel);
 
         [Delete("/tracker/TTrTrafficLight/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrTrafficLight/Get/{id}")]
         Task<TTrTrafficLightReadModel> Get(string id);

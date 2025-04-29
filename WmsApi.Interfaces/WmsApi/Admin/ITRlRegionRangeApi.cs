@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlRegionRangeApi
+    public partial interface ITRlRegionRangeApi
     {
         [Post("/admin/TRlRegionRange/Create")]
         Task<OperationResult> Create([Body] TRlRegionRangeCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TRlRegionRangeUpdateModel updateModel);
 
         [Delete("/admin/TRlRegionRange/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlRegionRange/Get/{id}")]
         Task<TRlRegionRangeReadModel> Get(string id);

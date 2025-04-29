@@ -7,14 +7,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrMessageSendApi
+    public partial interface ITTrMessageSendApi
     {
-        /// <summary>
-        /// 批量启用/禁用=========重新发送
-        /// </summary>
-        /// <returns></returns>
         [Post("/tracker/TTrMessageSend/UpdateIsabled")]
-        Task<OperationResult> UpdateIsabled([Query] string[] ids = null, int? isEnable = null);
+        Task<OperationResult> UpdateIsabled(string[] ids = null, int? isEnable = null);
 
         [Post("/tracker/TTrMessageSend/Create")]
         Task<OperationResult> Create([Body] TTrMessageSendCreateModel createModel);
@@ -23,7 +19,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrMessageSendUpdateModel updateModel);
 
         [Delete("/tracker/TTrMessageSend/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrMessageSend/Get/{id}")]
         Task<TTrMessageSendReadModel> Get(string id);

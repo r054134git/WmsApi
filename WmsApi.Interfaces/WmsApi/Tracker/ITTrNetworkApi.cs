@@ -7,23 +7,17 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrNetworkApi
+    public partial interface ITTrNetworkApi
     {
         [Get("/tracker/TTrNetwork/GetQueryList")]
-        Task<PageResult<TTrNetworkReadModel>> GetQueryList([Query] int[] isConnected = null, [Query] int[] isEnable = null);
+        Task<PageResult<TTrNetworkReadModel>> GetQueryList(int[] isConnected = null, int[] isEnable = null);
 
         [Get("/tracker/TTrNetwork/UpdateState")]
         Task UpdateState();
 
-        /// <summary>
-        /// 重启moxa
-        /// </summary>
         [Post("/tracker/TTrNetwork/RebootMoxa")]
         Task<bool> RebootMoxa(string name = null, string ip = null);
 
-        /// <summary>
-        /// 重启平扫
-        /// </summary>
         [Post("/tracker/TTrNetwork/RebootFlatScan")]
         Task<bool> RebootFlatScan(string ip = null);
 
@@ -34,7 +28,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrNetworkUpdateModel updateModel);
 
         [Delete("/tracker/TTrNetwork/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrNetwork/Get/{id}")]
         Task<TTrNetworkReadModel> Get(string id);

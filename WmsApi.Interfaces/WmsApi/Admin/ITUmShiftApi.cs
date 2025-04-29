@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmShiftApi
+    public partial interface ITUmShiftApi
     {
         [Post("/admin/TUmShift/Create")]
         Task<OperationResult> Create([Body] TUmShiftCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmShiftUpdateModel updateModel);
 
         [Delete("/admin/TUmShift/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmShift/Get/{id}")]
         Task<TUmShiftReadModel> Get(string id);

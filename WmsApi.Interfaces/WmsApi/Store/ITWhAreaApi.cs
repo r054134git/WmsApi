@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Store
 {
-    public interface ITWhAreaApi
+    public partial interface ITWhAreaApi
     {
         [Post("/store/TWhArea/Create")]
         Task<OperationResult> Create([Body] TWhAreaCreateModel createModel);
@@ -15,28 +15,20 @@ namespace WmsApi.Store
         [Get("/store/TWhArea/GetListOfBay")]
         Task<PageResult<TWhAreaReadModel>> GetListOfBay(string bayId = null);
 
-        /// <summary>
-        /// 创建库区域
-        /// </summary>
-        /// <returns></returns>
         [Post("/store/TWhArea/SendMesInfo")]
         Task<OperationResult> SendMesInfo(string ownerBussinessName = null, string bayArea = null, string user = null);
 
         [Get("/store/TWhArea/GetListOfBayList")]
-        Task<PageResult<TWhAreaReadModel>> GetListOfBayList([Query] string[] bayIds = null);
+        Task<PageResult<TWhAreaReadModel>> GetListOfBayList(string[] bayIds = null);
 
-        /// <summary>
-        /// 区域筛选
-        /// </summary>
-        /// <returns></returns>
         [Get("/store/TWhArea/GetPageQuery")]
-        Task<PageResult<TWhAreaReadModel>> GetPageQuery(int? current = null, int? pageSize = null, [Query] string[] ownerId = null, [Query] int[] isVirtual = null, [Query] int[] isEnable = null);
+        Task<PageResult<TWhAreaReadModel>> GetPageQuery(int? current = null, int? pageSize = null, string[] ownerId = null, int[] isVirtual = null, int[] isEnable = null);
 
         [Put("/store/TWhArea/Update/{id}")]
         Task<OperationResult> Update(string id, [Body] TWhAreaUpdateModel updateModel);
 
         [Delete("/store/TWhArea/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/store/TWhArea/Get/{id}")]
         Task<TWhAreaReadModel> Get(string id);

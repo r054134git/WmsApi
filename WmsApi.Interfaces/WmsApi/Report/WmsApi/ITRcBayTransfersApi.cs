@@ -7,19 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcBayTransfersApi
+    public partial interface ITRcBayTransfersApi
     {
-        /// <summary>
-        /// 生成倒运报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcBayTransfers/ReportExcel")]
         Task ReportExcel();
 
-        /// <summary>
-        /// 生成0点库存报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcBayTransfers/MaterialReportExcel")]
         Task MaterialReportExcel();
 
@@ -30,7 +22,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TPlBayTransferUpdateModel updateModel);
 
         [Delete("/report/TRcBayTransfers/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcBayTransfers/Get/{id}")]
         Task<TPlBayTransferReadModel> Get(string id);

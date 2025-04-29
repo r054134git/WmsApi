@@ -576,6 +576,19 @@ namespace WmsApi.Domain.Mapping
                 .HasColumnName("TYPE")
                 .HasColumnType("int(11)");
 
+            builder.Property(t => t.LocationId)
+                .HasColumnName("LOCATION_ID")
+                .HasColumnType("varchar(32)")
+                .HasMaxLength(32);
+
+            builder.Property(t => t.PointX)
+                .HasColumnName("POINT_X")
+                .HasColumnType("decimal(10,3)");
+
+            builder.Property(t => t.PointY)
+                .HasColumnName("POINT_Y")
+                .HasColumnType("decimal(10,3)");
+
             builder.Property(t => t.LocationName)
                 .HasColumnName("LOCATION_NAME")
                 .HasColumnType("varchar(255)")
@@ -855,6 +868,12 @@ namespace WmsApi.Domain.Mapping
             public const string Remark = "REMARK";
             /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.Type" /></summary>
             public const string Type = "TYPE";
+            /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.LocationId" /></summary>
+            public const string LocationId = "LOCATION_ID";
+            /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.PointX" /></summary>
+            public const string PointX = "POINT_X";
+            /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.PointY" /></summary>
+            public const string PointY = "POINT_Y";
             /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.LocationName" /></summary>
             public const string LocationName = "LOCATION_NAME";
             /// <summary>Column Name constant for property <see cref="WmsApi.Domain.Entities.VPlMaterial.OwnerBussinessName" /></summary>

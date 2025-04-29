@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlStackTranferApi
+    public partial interface ITPlStackTranferApi
     {
         [Post("/plan/TPlStackTranfer/CreateStack")]
         Task<OperationResult> CreateStack([Body] TPlStackTranferCreateModel createModel);
@@ -16,21 +16,13 @@ namespace WmsApi.Plan
         Task<OperationResult> UpdateStack(string id, [Body] TPlStackTranferUpdateModel updateModel);
 
         [Delete("/plan/TPlStackTranfer/DeleteStack")]
-        Task<OperationResult> DeleteStack([Query] string[] ids = null);
+        Task<OperationResult> DeleteStack(string[] ids = null);
 
-        /// <summary>
-        /// 批量启用/禁用
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlStackTranfer/UpdateIsabled")]
-        Task<OperationResult> UpdateIsabled([Query] string[] ids = null, int? isEnable = null);
+        Task<OperationResult> UpdateIsabled(string[] ids = null, int? isEnable = null);
 
-        /// <summary>
-        /// 批量重置
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlStackTranfer/UpdateReset")]
-        Task<OperationResult> UpdateReset([Query] string[] ids = null);
+        Task<OperationResult> UpdateReset(string[] ids = null);
 
         [Post("/plan/TPlStackTranfer/Create")]
         Task<OperationResult> Create([Body] TPlStackTranferCreateModel createModel);
@@ -39,7 +31,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlStackTranferUpdateModel updateModel);
 
         [Delete("/plan/TPlStackTranfer/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlStackTranfer/Get/{id}")]
         Task<TPlStackTranferReadModel> Get(string id);

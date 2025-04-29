@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Equip
 {
-    public interface ITEqTrainCarApi
+    public partial interface ITEqTrainCarApi
     {
         [Post("/equip/TEqTrainCar/Create")]
         Task<OperationResult> Create([Body] TEqTrainCarCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Equip
         Task<OperationResult> Update(string id, [Body] TEqTrainCarUpdateModel updateModel);
 
         [Delete("/equip/TEqTrainCar/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/equip/TEqTrainCar/Get/{id}")]
         Task<TEqTrainCarReadModel> Get(string id);

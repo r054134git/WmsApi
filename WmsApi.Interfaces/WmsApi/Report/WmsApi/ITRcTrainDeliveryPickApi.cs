@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcTrainDeliveryPickApi
+    public partial interface ITRcTrainDeliveryPickApi
     {
         [Post("/report/TRcTrainDeliveryPick/Create")]
         Task<OperationResult> Create([Body] TRcTrainDeliveryPickCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcTrainDeliveryPickUpdateModel updateModel);
 
         [Delete("/report/TRcTrainDeliveryPick/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcTrainDeliveryPick/Get/{id}")]
         Task<TRcTrainDeliveryPickReadModel> Get(string id);

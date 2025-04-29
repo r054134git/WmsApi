@@ -7,26 +7,14 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Equip
 {
-    public interface ITEqCrossVehicleApi
+    public partial interface ITEqCrossVehicleApi
     {
-        /// <summary>
-        /// 各课过跨车
-        /// </summary>
-        /// <returns></returns>
         [Get("/equip/TEqCrossVehicle/GetCrossCar")]
         Task<TEqCrossVehicleReadModel> GetCrossCar(string bayCode = null);
 
-        /// <summary>
-        /// 过跨车去向发送
-        /// </summary>
-        /// <returns></returns>
         [Post("/equip/TEqCrossVehicle/SendCrossTrainMove")]
         Task<OperationResult> SendCrossTrainMove(string name = null, string bayName = null, int? opCmd = null);
 
-        /// <summary>
-        /// 获取电瓶车
-        /// </summary>
-        /// <returns></returns>
         [Get("/equip/TEqCrossVehicle/GetElectronicVehicle")]
         Task<PageResult<TEqCrossVehicleReadModel>> GetElectronicVehicle();
 
@@ -37,7 +25,7 @@ namespace WmsApi.Equip
         Task<OperationResult> Update(string id, [Body] TEqCrossVehicleUpdateModel updateModel);
 
         [Delete("/equip/TEqCrossVehicle/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/equip/TEqCrossVehicle/Get/{id}")]
         Task<TEqCrossVehicleReadModel> Get(string id);

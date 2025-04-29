@@ -7,19 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmMenuApi
+    public partial interface ITUmMenuApi
     {
-        /// <summary>
-        /// 获取所有ownerid为空（即菜单文件夹）的数据列表
-        /// </summary>
         [Get("/admin/TUmMenu/GetAllFolderList")]
         Task<PageResult<TUmMenuReadModel>> GetAllFolderList();
 
-        /// <summary>
-        /// 获取所有的菜单列表
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TUmMenu/GetAllList")]
         Task<PageResult<TUmMenuReadModel>> GetAllList();
 
@@ -30,7 +22,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmMenuUpdateModel updateModel);
 
         [Delete("/admin/TUmMenu/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmMenu/Get/{id}")]
         Task<TUmMenuReadModel> Get(string id);

@@ -9,25 +9,14 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcInventoryApi
+    public partial interface ITRcInventoryApi
     {
-        /// <summary>
-        /// 手持获取批次号
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcInventory/GetAllPlanNo")]
         Task<PageResult<TRcInventoryReadModel>> GetAllPlanNo(string bayId = null);
 
-        /// <summary>
-        /// 客户端获取批次号
-        /// </summary>
         [Get("/report/TRcInventory/GetPlanNo")]
         Task<PageResult<TRcInventoryReadModel>> GetPlanNo(DateTime? startTime = null, DateTime? endTime = null);
 
-        /// <summary>
-        /// 创建盘库批次号
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcInventory/AddAllPlanNo")]
         Task<ItemResult<TRcInventoryReadModel>> AddAllPlanNo(string bayId = null);
 
@@ -38,7 +27,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcInventoryUpdateModel updateModel);
 
         [Delete("/report/TRcInventory/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcInventory/Get/{id}")]
         Task<TRcInventoryReadModel> Get(string id);

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmColSetApi
+    public partial interface ITUmColSetApi
     {
         [Post("/admin/TUmColSet/Create")]
         Task<OperationResult> Create([Body] TUmColSetCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmColSetUpdateModel updateModel);
 
         [Delete("/admin/TUmColSet/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmColSet/Get/{id}")]
         Task<TUmColSetReadModel> Get(string id);

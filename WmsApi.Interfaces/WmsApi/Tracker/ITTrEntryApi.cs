@@ -7,13 +7,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrEntryApi
+    public partial interface ITTrEntryApi
     {
-        /// <summary>
-        /// 获取库门道闸
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/tracker/TTrEntry/GetGateEntry")]
         Task<PageResult<TTrEntryReadModel>> GetGateEntry();
 
@@ -24,7 +19,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrEntryUpdateModel updateModel);
 
         [Delete("/tracker/TTrEntry/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrEntry/Get/{id}")]
         Task<TTrEntryReadModel> Get(string id);

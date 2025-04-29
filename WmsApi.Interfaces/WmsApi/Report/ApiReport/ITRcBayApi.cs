@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.ApiReport
 {
-    public interface ITRcBayApi
+    public partial interface ITRcBayApi
     {
         [Post("/report/TRcBay/Create")]
         Task<OperationResult> Create([Body] TRcBayCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Report.ApiReport
         Task<OperationResult> Update(string id, [Body] TRcBayUpdateModel updateModel);
 
         [Delete("/report/TRcBay/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcBay/Get/{id}")]
         Task<TRcBayReadModel> Get(string id);

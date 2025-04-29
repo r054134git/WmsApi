@@ -7,10 +7,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcLogApi
+    public partial interface ITRcLogApi
     {
         [Get("/report/TRcLog/GetPageBy20w")]
-        Task<PageResult<TRcLogReadModel>> GetPageBy20w(int? current = null, int? pageSize = null, [Query] string[] time = null, string message = null);
+        Task<PageResult<TRcLogReadModel>> GetPageBy20w(int? current = null, int? pageSize = null, string[] time = null, string message = null);
 
         [Post("/report/TRcLog/CreateLog")]
         Task<OperationResult> CreateLog(string message = null);
@@ -22,7 +22,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcLogUpdateModel updateModel);
 
         [Delete("/report/TRcLog/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcLog/Get/{id}")]
         Task<TRcLogReadModel> Get(string id);

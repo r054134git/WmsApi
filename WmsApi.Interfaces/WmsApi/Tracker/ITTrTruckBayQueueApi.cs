@@ -8,15 +8,14 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrTruckBayQueueApi
+    public partial interface ITTrTruckBayQueueApi
     {
         [Get("/tracker/TTrTruckBayQueue/GetPageByString")]
         Task<PageResult<TTrTruckBayQueueReadModel>> GetPageByString(int? current = null, int? pageSize = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 根据主要装车单查询排队车辆装车的卷信息
-        /// </summary>
-        /// <returns></returns>
+        [Get("/tracker/TTrTruckBayQueue/GetPageByStringH")]
+        Task<PageResult<TTrTruckBayQueueWithCountDto>> GetPageByStringH(int? current = null, int? pageSize = null, string where = null, string[] time = null, string orders = null);
+
         [Get("/tracker/TTrTruckBayQueue/GetLoadTruckList")]
         Task<List<VPlMaterialReadModel>> GetLoadTruckList(string truckNo = null, string mainLoadingNo = null, string bayCode = null);
 
@@ -27,7 +26,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrTruckBayQueueUpdateModel updateModel);
 
         [Delete("/tracker/TTrTruckBayQueue/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrTruckBayQueue/Get/{id}")]
         Task<TTrTruckBayQueueReadModel> Get(string id);

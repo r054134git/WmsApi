@@ -7,19 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlAutoCodeApi
+    public partial interface ITPlAutoCodeApi
     {
-        /// <summary>
-        /// 创建计划编号
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlAutoCode/CreatePlanId")]
         Task<string> CreatePlanId();
 
-        /// <summary>
-        /// 创建计划编号
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlAutoCode/CreateTransferNo")]
         Task<string> CreateTransferNo();
 
@@ -30,7 +22,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlAutoCodeUpdateModel updateModel);
 
         [Delete("/plan/TPlAutoCode/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlAutoCode/Get/{id}")]
         Task<TPlAutoCodeReadModel> Get(string id);

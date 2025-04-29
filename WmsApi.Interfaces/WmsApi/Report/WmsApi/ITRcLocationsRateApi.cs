@@ -7,10 +7,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcLocationsRateApi
+    public partial interface ITRcLocationsRateApi
     {
         [Get("/report/TRcLocationsRate/GetPageBySearchTime")]
-        Task<PageResult<TRcLocationsRateReadModel>> GetPageBySearchTime(int? current = null, int? pageSize = null, [Query] string[] dt = null, [Query] string[] bayCode = null, string orders = null);
+        Task<PageResult<TRcLocationsRateReadModel>> GetPageBySearchTime(int? current = null, int? pageSize = null, string[] dt = null, string[] bayCode = null, string orders = null);
 
         [Post("/report/TRcLocationsRate/Create")]
         Task<OperationResult> Create([Body] TRcLocationsRateCreateModel createModel);
@@ -19,7 +19,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcLocationsRateUpdateModel updateModel);
 
         [Delete("/report/TRcLocationsRate/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcLocationsRate/Get/{id}")]
         Task<TRcLocationsRateReadModel> Get(string id);

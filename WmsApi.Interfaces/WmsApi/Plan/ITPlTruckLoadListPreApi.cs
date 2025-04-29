@@ -8,73 +8,43 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlTruckLoadListPreApi
+    public partial interface ITPlTruckLoadListPreApi
     {
-        /// <summary>
-        /// 移库/发货单列表
-        /// </summary>
         [Get("/plan/TPlTruckLoadListPre/GetAllLoadingNos_old")]
-        Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos_old(int? current = null, int? pageSize = null, string vehicleNo = null, [Query] int[] resolveState = null, [Query] string[] sourceHouse = null);
+        Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos_old(int? current = null, int? pageSize = null, string vehicleNo = null, int[] resolveState = null, string[] sourceHouse = null);
 
-        /// <summary>
-        /// 移库/发货单列表
-        /// </summary>
         [Get("/plan/TPlTruckLoadListPre/GetAllLoadingNos")]
         Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos(int? current = null, int? pageSize = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货 未挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/GetAllUnpicked_old")]
         Task<OperationResult<List<VPlMaterialReadModel>>> GetAllUnpicked_old(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 移库/发货 未挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/GetAllUnpicked")]
         Task<OperationResult<List<VPlMaterialReadModel>>> GetAllUnpicked(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货 已挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/GetAllPicked_old")]
         Task<PageResult<VPlMaterialReadModel>> GetAllPicked_old(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 移库/发货 已挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/GetAllPicked")]
         Task<PageResult<VPlMaterialReadModel>> GetAllPicked(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货预挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/Pick")]
-        Task<OperationResult> Pick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, [Query] string[] materialNos = null);
+        Task<OperationResult> Pick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string[] materialNos = null);
 
-        /// <summary>
-        /// 移库/发货预挑库取消
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/Unpick")]
-        Task<OperationResult> Unpick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, [Query] string[] materialNos = null);
+        Task<OperationResult> Unpick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string[] materialNos = null);
 
-        /// <summary>
-        /// 移库/发货预挑库确认
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/Confirm")]
         Task<OperationResult> Confirm(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 移库/发货预挑库取消   【暂时没有取消】
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/Cancel")]
         Task<OperationResult> Cancel(string truckLoadingNo = null, string detailNo = null);
 
-        /// <summary>
-        /// 自动预挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListPre/AutoPrePick")]
         Task<OperationResult> AutoPrePick(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null);
+
+        [Get("/plan/TPlTruckLoadListPre/GetTheAutomaticLoadingRatio")]
+        Task<PageResult<int>> GetTheAutomaticLoadingRatio(string[] time = null);
 
         [Post("/plan/TPlTruckLoadListPre/Create")]
         Task<OperationResult> Create([Body] TPlTruckLoadListCreateModel createModel);
@@ -83,7 +53,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlTruckLoadListUpdateModel updateModel);
 
         [Delete("/plan/TPlTruckLoadListPre/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlTruckLoadListPre/Get/{id}")]
         Task<TPlTruckLoadListReadModel> Get(string id);

@@ -7,10 +7,10 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmUserApi
+    public partial interface ITUmUserApi
     {
         [Get("/admin/TUmUser/GetPageQuery")]
-        Task<PageResult<TUmUserReadModel>> GetPageQuery(int? current = null, int? pageSize = null, string account = null, string name = null, string department = null, [Query] string[] teamName = null);
+        Task<PageResult<TUmUserReadModel>> GetPageQuery(int? current = null, int? pageSize = null, string account = null, string name = null, string department = null, string[] teamName = null);
 
         [Get("/admin/TUmUser/GetUserInfo")]
         Task<PageResult<TUmUserReadModel>> GetUserInfo([Body] TUmUserReadModel user);
@@ -22,7 +22,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmUserUpdateModel updateModel);
 
         [Delete("/admin/TUmUser/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmUser/Get/{id}")]
         Task<TUmUserReadModel> Get(string id);

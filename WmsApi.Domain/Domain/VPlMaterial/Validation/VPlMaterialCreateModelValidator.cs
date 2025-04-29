@@ -92,6 +92,7 @@ namespace WmsApi.Domain.Validation
             RuleFor(p => p.Terminal).MaximumLength(200);
             RuleFor(p => p.BelongTerminal).MaximumLength(200);
             RuleFor(p => p.Remark).MaximumLength(255);
+            RuleFor(p => p.LocationId).MaximumLength(32);
             RuleFor(p => p.LocationName).MaximumLength(255);
             RuleFor(p => p.OwnerBussinessName).MaximumLength(32);
             RuleFor(p => p.BayCode).MaximumLength(30);

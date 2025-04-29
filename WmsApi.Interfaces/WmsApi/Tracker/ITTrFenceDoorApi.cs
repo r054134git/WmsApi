@@ -7,12 +7,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrFenceDoorApi
+    public partial interface ITTrFenceDoorApi
     {
-        /// <summary>
-        /// 手持机扫码请求开门
-        /// </summary>
-        /// <returns></returns>
         [Put("/tracker/TTrFenceDoor/ScanOpenDoor")]
         Task<OperationResult> ScanOpenDoor(string fenceDoorCode = null, string userName = null);
 
@@ -23,7 +19,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrFenceDoorUpdateModel updateModel);
 
         [Delete("/tracker/TTrFenceDoor/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrFenceDoor/Get/{id}")]
         Task<TTrFenceDoorReadModel> Get(string id);

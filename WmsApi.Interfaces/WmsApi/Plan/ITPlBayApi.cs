@@ -9,96 +9,47 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlBayApi
+    public partial interface ITPlBayApi
     {
         [Get("/plan/TPlBay/GetPagePlayAndTaskByString")]
         Task<PageResult<TPlBayReadCraneTaskModel>> GetPagePlayAndTaskByString(int? current = null, int? pageSize = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 创建库内倒垛计划
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlBay/CreateBayPlan")]
         Task<OperationResult> CreateBayPlan([Body] TPlBayCreateModel createModel);
 
-        /// <summary>
-        /// 批量创建库内倒垛计划
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlBay/CreateBayPlanBatch")]
         Task<OperationResult> CreateBayPlanBatch([Body] TPlBayBatchCreateModel createModel);
 
-        /// <summary>
-        /// 获取在库鞍座
-        /// </summary>
         [Get("/plan/TPlBay/GetLibLocation")]
         Task<ValueTuple<List<TTrLocationMaterialReadModel>, int>> GetLibLocation([Body] TPlBayBatchCreateModel createModel);
 
-        /// <summary>
-        /// 获取空鞍座
-        /// </summary>
         [Get("/plan/TPlBay/GetKongLocation")]
         Task<ValueTuple<List<TTrLocationMaterialReadModel>, int>> GetKongLocation([Body] TPlBayBatchCreateModel createModel);
 
-        /// <summary>
-        /// 创建精整上料倒垛计划
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlBay/AddFinishLinePlan")]
         Task<OperationResult> AddFinishLinePlan(string materialNo = null);
 
         [Get("/plan/TPlBay/GetCranePlan")]
         Task<PageResult<TPlBayReadModel>> GetCranePlan(string bayId = null, string type = null, string craneName = null);
 
-        /// <summary>
-        /// 手持创建计划
-        /// </summary>
-        /// <returns></returns>
         [Post("/plan/TPlBay/HoldCreatePlan")]
         Task<OperationResult> HoldCreatePlan(string material = null, string destLocation = null, string type = null);
 
-        /// <summary>
-        /// 修改计划优先级
-        /// </summary>
-        /// <param name="bayId"></param>
-        /// <param name="materialNo"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Put("/plan/TPlBay/UpdatePlanPriority")]
         Task<int> UpdatePlanPriority(string bayId = null, string materialNo = null);
 
-        /// <summary>
-        /// 编辑库内倒垛计划
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlBay/UpdateBayPlan")]
         Task<OperationResult> UpdateBayPlan([Body] TPlBayUpdateModel updateModel);
 
-        /// <summary>
-        /// 客户端行车计划重置
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlBay/ResettingTask")]
         Task<OperationResult> ResettingTask(string id = null);
 
-        /// <summary>
-        /// 客户端批量重置计划
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlBay/BatchResettingPlan")]
-        Task<OperationResult> BatchResettingPlan([Query] string[] ids = null);
+        Task<OperationResult> BatchResettingPlan(string[] ids = null);
 
-        /// <summary>
-        /// 计划删除
-        /// </summary>
-        /// <returns></returns>
         [Delete("/plan/TPlBay/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
-        /// <summary>
-        /// 计划是否存在
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlBay/PlanIsNotExist")]
         Task<TPlBayReadModel> PlanIsNotExist(string materialNo = null);
 

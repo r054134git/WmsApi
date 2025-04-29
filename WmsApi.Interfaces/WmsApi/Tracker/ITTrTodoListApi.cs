@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrTodoListApi
+    public partial interface ITTrTodoListApi
     {
         [Post("/tracker/TTrTodoList/Create")]
         Task<OperationResult> Create([Body] TTrTodoListCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrTodoListUpdateModel updateModel);
 
         [Delete("/tracker/TTrTodoList/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrTodoList/Get/{id}")]
         Task<TTrTodoListReadModel> Get(string id);

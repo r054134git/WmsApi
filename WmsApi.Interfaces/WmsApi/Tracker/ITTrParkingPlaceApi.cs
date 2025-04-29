@@ -7,20 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrParkingPlaceApi
+    public partial interface ITTrParkingPlaceApi
     {
-        /// <summary>
-        /// 更改车位道闸开关
-        /// </summary>
-        /// <returns></returns>
         [Put("/tracker/TTrParkingPlace/UpdateGateParking")]
         Task<int> UpdateGateParking(string name = null);
 
-        /// <summary>
-        /// 获取车位道闸
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/tracker/TTrParkingPlace/GetGateParking")]
         Task<PageResult<TTrParkingPlaceReadModel>> GetGateParking();
 
@@ -31,7 +22,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrParkingPlaceUpdateModel updateModel);
 
         [Delete("/tracker/TTrParkingPlace/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrParkingPlace/Get/{id}")]
         Task<TTrParkingPlaceReadModel> Get(string id);

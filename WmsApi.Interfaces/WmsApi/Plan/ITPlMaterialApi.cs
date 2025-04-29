@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlMaterialApi
+    public partial interface ITPlMaterialApi
     {
         [Put("/plan/TPlMaterial/UpdateMat/{id}")]
         Task<OperationResult> UpdateMat(string id, [Body] TPlMaterialUpdateModel updateModel);
@@ -30,17 +30,9 @@ namespace WmsApi.Plan
         [Get("/plan/TPlMaterial/UpdateCoilState")]
         Task<int> UpdateCoilState([Body] TPlMaterialReadModel pl);
 
-        /// <summary>
-        /// 更改物料信息
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlMaterial/UpdateCoilInfo")]
         Task<OperationResult> UpdateCoilInfo([Body] TPlMaterialUpdateModel updateModel);
 
-        /// <summary>
-        /// 获取物料信息
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlMaterial/GetMaterialWeight")]
         Task<int> GetMaterialWeight(string materialNo = null);
 
@@ -48,7 +40,7 @@ namespace WmsApi.Plan
         Task<bool> ConfirmOut(string bayName = null, string coilNo = null);
 
         [Get("/plan/TPlMaterial/GetQueryPageList")]
-        Task<PageResult<TPlMaterialReadModel>> GetQueryPageList([Query] string[] time = null, int? current = null, int? pageSize = null);
+        Task<PageResult<TPlMaterialReadModel>> GetQueryPageList(string[] time = null, int? current = null, int? pageSize = null);
 
         [Post("/plan/TPlMaterial/Create")]
         Task<OperationResult> Create([Body] TPlMaterialCreateModel createModel);
@@ -57,7 +49,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlMaterialUpdateModel updateModel);
 
         [Delete("/plan/TPlMaterial/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlMaterial/Get/{id}")]
         Task<TPlMaterialReadModel> Get(string id);

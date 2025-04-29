@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Equip
 {
-    public interface ITEqCraneApi
+    public partial interface ITEqCraneApi
     {
         [Get("/equip/TEqCrane/GetListOfBay")]
         Task<PageResult<TEqCraneReadModel>> GetListOfBay(string bayId = null);
@@ -18,15 +18,11 @@ namespace WmsApi.Equip
         [Put("/equip/TEqCrane/Update/{id}")]
         Task<OperationResult> Update(string id, [Body] TEqCraneUpdateModel updateModel);
 
-        /// <summary>
-        /// 行车前往待机位
-        /// </summary>
-        /// <returns></returns>
         [Post("/equip/TEqCrane/SendCraneCmd")]
         Task<OperationResult> SendCraneCmd(string craneId = null, int? cmd = null);
 
         [Delete("/equip/TEqCrane/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/equip/TEqCrane/Get/{id}")]
         Task<TEqCraneReadModel> Get(string id);

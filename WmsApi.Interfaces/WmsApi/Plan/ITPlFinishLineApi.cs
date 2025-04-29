@@ -8,34 +8,17 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlFinishLineApi
+    public partial interface ITPlFinishLineApi
     {
-        /// <summary>
-        /// 获取上料机组
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlFinishLine/GetLine")]
         Task<PageResult<TPlFinishLineReadModel>> GetLine();
 
-        /// <summary>
-        /// 获取生产计划号
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlFinishLine/GetStockPlan")]
         Task<PageResult<TPlFinishLineReadModel>> GetStockPlan(string lineNo = null);
 
-        /// <summary>
-        /// 上料计划钢卷列表
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlFinishLine/GetAllStockList")]
         Task<List<TTrLocationMaterialReadModel>> GetAllStockList(string planNo = null);
 
-        /// <summary>
-        /// 精整上料
-        /// </summary>
-        /// <param name="materialNo"></param>
-        /// <returns></returns>
         [Post("/plan/TPlFinishLine/LoadMaterial")]
         Task<OperationResult> LoadMaterial(string materialNo = null);
 
@@ -46,7 +29,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlFinishLineUpdateModel updateModel);
 
         [Delete("/plan/TPlFinishLine/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlFinishLine/Get/{id}")]
         Task<TPlFinishLineReadModel> Get(string id);

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Tracker
 {
-    public interface ITTrTrainApi
+    public partial interface ITTrTrainApi
     {
         [Post("/tracker/TTrTrain/Create")]
         Task<OperationResult> Create([Body] TTrTrainCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Tracker
         Task<OperationResult> Update(string id, [Body] TTrTrainUpdateModel updateModel);
 
         [Delete("/tracker/TTrTrain/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/tracker/TTrTrain/Get/{id}")]
         Task<TTrTrainReadModel> Get(string id);

@@ -7,33 +7,17 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlCraneTaskApi
+    public partial interface ITPlCraneTaskApi
     {
-        /// <summary>
-        /// 获取行车吊运任务列表
-        /// </summary>
-        /// <returns></returns>
         [Get("/plan/TPlCraneTask/GetAllTaskList")]
         Task<PageResult<TPlCraneTaskReadModel>> GetAllTaskList(string bayId = null, string craneId = null);
 
-        /// <summary>
-        /// 手持冻结吊运任务
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlCraneTask/UpdateTaskState")]
         Task<int> UpdateTaskState(string bayId = null, string materialNo = null);
 
-        /// <summary>
-        /// 客户端冻结吊运任务
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlCraneTask/UpdateTaskFrozon")]
         Task<OperationResult> UpdateTaskFrozon(string id = null, bool? frozon = null);
 
-        /// <summary>
-        /// 发送其它行车
-        /// </summary>
-        /// <returns></returns>
         [Put("/plan/TPlCraneTask/UpdateUserCraneId")]
         Task<OperationResult> UpdateUserCraneId(string id = null, string craneId = null);
 
@@ -44,7 +28,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlCraneTaskUpdateModel updateModel);
 
         [Delete("/plan/TPlCraneTask/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlCraneTask/Get/{id}")]
         Task<TPlCraneTaskReadModel> Get(string id);

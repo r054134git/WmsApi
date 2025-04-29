@@ -7,21 +7,11 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITScAppApi
+    public partial interface ITScAppApi
     {
-        /// <summary>
-        /// 手持终端版本号
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TScApp/GetHoldApp")]
         Task<TScAppReadModel> GetHoldApp();
 
-        /// <summary>
-        /// 车载终端版本号
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/admin/TScApp/GetCraneApp")]
         Task<TScAppReadModel> GetCraneApp();
 
@@ -32,7 +22,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TScAppUpdateModel updateModel);
 
         [Delete("/admin/TScApp/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TScApp/Get/{id}")]
         Task<TScAppReadModel> Get(string id);

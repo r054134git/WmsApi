@@ -8,16 +8,8 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcCameraApi
+    public partial interface ITRcCameraApi
     {
-        /// <summary>
-
-        /// </summary>
-        /// <param name="bayName"></param>
-        /// <param name="dtStart"></param>
-        /// <param name="dtEnd"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [Get("/report/TRcCamera/GetCameraRecord")]
         Task<PageResult<TRcCameraIdsReadModel>> GetCameraRecord(string bayName = null, DateTime? dtStart = null, DateTime? dtEnd = null);
 
@@ -28,7 +20,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcCameraIdsUpdateModel updateModel);
 
         [Delete("/report/TRcCamera/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcCamera/Get/{id}")]
         Task<TRcCameraIdsReadModel> Get(string id);

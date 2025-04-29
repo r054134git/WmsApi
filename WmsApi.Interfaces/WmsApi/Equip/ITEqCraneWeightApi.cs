@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Equip
 {
-    public interface ITEqCraneWeightApi
+    public partial interface ITEqCraneWeightApi
     {
         [Post("/equip/TEqCraneWeight/Create")]
         Task<OperationResult> Create([Body] TEqCraneWeightCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Equip
         Task<OperationResult> Update(string id, [Body] TEqCraneWeightUpdateModel updateModel);
 
         [Delete("/equip/TEqCraneWeight/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/equip/TEqCraneWeight/Get/{id}")]
         Task<TEqCraneWeightReadModel> Get(string id);

@@ -7,23 +7,14 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlTruckLoadListHistoryApi
+    public partial interface ITPlTruckLoadListHistoryApi
     {
-        /// <summary>
-        /// 移库/发货单列表
-        /// </summary>
         [Get("/plan/TPlTruckLoadListHistory/GetAllLoadingNos")]
         Task<PageResult<TPlTruckLoadListReadModel>> GetAllLoadingNos(int? current = null, int? pageSize = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货 已挑库
-        /// </summary>
         [Post("/plan/TPlTruckLoadListHistory/GetAllPicked")]
         Task<PageResult<TPlMaterialReadModel>> GetAllPicked(string vehicleNo = null, string truckLoadingNo = null, string detailNo = null, string where = null, string orders = null);
 
-        /// <summary>
-        /// 移库/发货出库撤销
-        /// </summary>
         [Post("/plan/TPlTruckLoadListHistory/Cancel")]
         Task<OperationResult> Cancel(string vehicleNo = null, string mainTruckLoadingNo = null, string sourceHouse = null);
 
@@ -34,7 +25,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlTruckLoadListUpdateModel updateModel);
 
         [Delete("/plan/TPlTruckLoadListHistory/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlTruckLoadListHistory/Get/{id}")]
         Task<TPlTruckLoadListReadModel> Get(string id);

@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITUmPermissionApi
+    public partial interface ITUmPermissionApi
     {
         [Post("/admin/TUmPermission/Create")]
         Task<OperationResult> Create([Body] TUmPermissionCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TUmPermissionUpdateModel updateModel);
 
         [Delete("/admin/TUmPermission/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TUmPermission/Get/{id}")]
         Task<TUmPermissionReadModel> Get(string id);

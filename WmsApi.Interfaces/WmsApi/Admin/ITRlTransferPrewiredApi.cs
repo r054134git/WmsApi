@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlTransferPrewiredApi
+    public partial interface ITRlTransferPrewiredApi
     {
         [Post("/admin/TRlTransferPrewired/Create")]
         Task<OperationResult> Create([Body] TRlTransferPrewiredCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TRlTransferPrewiredUpdateModel updateModel);
 
         [Delete("/admin/TRlTransferPrewired/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlTransferPrewired/Get/{id}")]
         Task<TRlTransferPrewiredReadModel> Get(string id);

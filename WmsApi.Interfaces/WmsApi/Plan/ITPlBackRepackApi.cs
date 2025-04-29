@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Plan
 {
-    public interface ITPlBackRepackApi
+    public partial interface ITPlBackRepackApi
     {
         [Post("/plan/TPlBackRepack/Create")]
         Task<OperationResult> Create([Body] TPlBackRepackCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Plan
         Task<OperationResult> Update(string id, [Body] TPlBackRepackUpdateModel updateModel);
 
         [Delete("/plan/TPlBackRepack/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/plan/TPlBackRepack/Get/{id}")]
         Task<TPlBackRepackReadModel> Get(string id);

@@ -8,70 +8,46 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Report.WmsApi
 {
-    public interface ITRcMaterialEventApi
+    public partial interface ITRcMaterialEventApi
     {
         [Get("/report/TRcMaterialEvent/GetPageByStringQ")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringQ(int? current = null, int? pageSize = null, string materialNo = null, [Query] string[] operationType = null, string fromLocationName = null, string toLocationName = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringQ(int? current = null, int? pageSize = null, string materialNo = null, string[] operationType = null, string fromLocationName = null, string toLocationName = null);
 
         [Get("/report/TRcMaterialEvent/GetPageByStringQExcel")]
-        Task GetPageByStringQExcel(string materialNo = null, [Query] string[] operationType = null, string fromLocationName = null, string toLocationName = null, string reportName = null);
+        Task GetPageByStringQExcel(string materialNo = null, string[] operationType = null, string fromLocationName = null, string toLocationName = null, string reportName = null);
 
         [Get("/report/TRcMaterialEvent/GetPageByStringBayCode")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringBayCode(int? current = null, int? pageSize = null, [Query] string[] time = null, [Query] string[] bayCode = null, string materialNo = null, [Query] string[] operationType = null, [Query] string[] contentType = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringBayCode(int? current = null, int? pageSize = null, string[] time = null, string[] bayCode = null, string materialNo = null, string[] operationType = null, string[] contentType = null);
 
         [Get("/report/TRcMaterialEvent/GetPageByStringBayCodeCommon")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringBayCodeCommon([Query] string[] time = null, [Query] string[] bayCode = null, string materialNo = null, [Query] string[] operationType = null, [Query] string[] contentType = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetPageByStringBayCodeCommon(string[] time = null, string[] bayCode = null, string materialNo = null, string[] operationType = null, string[] contentType = null);
 
-        /// <summary>
-        /// 自动手动下载
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/GetPageByStringBayCodeExcel")]
-        Task GetPageByStringBayCodeExcel([Query] string[] time = null, [Query] string[] bayCode = null, string materialNo = null, [Query] string[] operationType = null, [Query] string[] contentType = null);
+        Task GetPageByStringBayCodeExcel(string[] time = null, string[] bayCode = null, string materialNo = null, string[] operationType = null, string[] contentType = null);
 
-        /// <summary>
-        /// 物料信息追溯
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/GetTracePageList")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetTracePageList(int? current = null, int? pageSize = null, string materialNo = null, [Query] string[] operationType = null, [Query] string[] contentType = null, [Query] DateTime[] dt = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetTracePageList(int? current = null, int? pageSize = null, string materialNo = null, string[] operationType = null, string[] contentType = null, DateTime[] dt = null);
 
         [Get("/report/TRcMaterialEvent/GetTraceReport")]
-        Task GetTraceReport(string materialNo = null, [Query] string[] operationType = null, [Query] string[] contentType = null, [Query] DateTime[] dt = null, string reportName = null);
+        Task GetTraceReport(string materialNo = null, string[] operationType = null, string[] contentType = null, DateTime[] dt = null, string reportName = null);
 
-        /// <summary>
-        /// 发货履历查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/GetDeliveryPageList")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetDeliveryPageList(int? current = null, int? pageSize = null, string materialNo = null, [Query] string[] operationType = null, [Query] DateTime[] dt = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetDeliveryPageList(int? current = null, int? pageSize = null, string materialNo = null, string[] operationType = null, DateTime[] dt = null);
 
-        /// <summary>
-        /// 发运的物料展示
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/GetOutMatList")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetOutMatList(int? current = null, int? pageSize = null, string bayid = null, [Query] string[] time = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetOutMatList(int? current = null, int? pageSize = null, string bayid = null, string[] time = null);
 
-        /// <summary>
-        /// 生成物料相关报表
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/CreateOutMatReportExcel")]
         Task CreateOutMatReportExcel(string time = null, string end = null, string type = null, string reportName = null);
 
         [Get("/report/TRcMaterialEvent/CreateReportExcelDelivery")]
-        Task CreateReportExcelDelivery(string materialNo = null, [Query] string[] operationType = null, [Query] DateTime[] dt = null, string reportName = null);
+        Task CreateReportExcelDelivery(string materialNo = null, string[] operationType = null, DateTime[] dt = null, string reportName = null);
 
-        /// <summary>
-        /// 挑库履历查询
-        /// </summary>
-        /// <returns></returns>
         [Get("/report/TRcMaterialEvent/GetPrePickPageList")]
-        Task<PageResult<TRcMaterialEventReadModel>> GetPrePickPageList(int? current = null, int? pageSize = null, string materialNo = null, string truckNo = null, string truckLoadingNo = null, [Query] DateTime[] dt = null);
+        Task<PageResult<TRcMaterialEventReadModel>> GetPrePickPageList(int? current = null, int? pageSize = null, string materialNo = null, string truckNo = null, string truckLoadingNo = null, DateTime[] dt = null);
 
         [Get("/report/TRcMaterialEvent/GetPrePickPageListExcel")]
-        Task GetPrePickPageListExcel(string materialNo = null, string truckNo = null, string truckLoadingNo = null, [Query] DateTime[] dt = null, string reportName = null);
+        Task GetPrePickPageListExcel(string materialNo = null, string truckNo = null, string truckLoadingNo = null, DateTime[] dt = null, string reportName = null);
 
         [Get("/report/TRcMaterialEvent/GetListByLocation")]
         Task<PageResult<TRcMaterialEventReadModel>> GetListByLocation(string locationName = null);
@@ -83,7 +59,7 @@ namespace WmsApi.Report.WmsApi
         Task<OperationResult> Update(string id, [Body] TRcMaterialEventUpdateModel updateModel);
 
         [Delete("/report/TRcMaterialEvent/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/report/TRcMaterialEvent/Get/{id}")]
         Task<TRcMaterialEventReadModel> Get(string id);

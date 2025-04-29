@@ -7,7 +7,7 @@ using WmsApi.Contracts.Models;
 
 namespace WmsApi.Admin
 {
-    public interface ITRlDispatchRulesApi
+    public partial interface ITRlDispatchRulesApi
     {
         [Post("/admin/TRlDispatchRules/Create")]
         Task<OperationResult> Create([Body] TRlDispatchRulesCreateModel createModel);
@@ -16,7 +16,7 @@ namespace WmsApi.Admin
         Task<OperationResult> Update(string id, [Body] TRlDispatchRulesUpdateModel updateModel);
 
         [Delete("/admin/TRlDispatchRules/Delete")]
-        Task<OperationResult> Delete([Query] string[] ids = null);
+        Task<OperationResult> Delete(string[] ids = null);
 
         [Get("/admin/TRlDispatchRules/Get/{id}")]
         Task<TRlDispatchRulesReadModel> Get(string id);
