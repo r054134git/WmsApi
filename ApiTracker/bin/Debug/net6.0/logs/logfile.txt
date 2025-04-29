@@ -1,0 +1,5 @@
+[2022-08-25 17:48:11.9009][Info][WmsApi.Controllers.ParkingLotController] 收到入侵数据 
+[2022-08-25 17:49:51.5429][Info][WmsApi.Controllers.ParkingLotController] 收到入侵数据 
+[2022-08-25 17:57:55.6108][Info][WmsApi.Controllers.ParkingLotController] 收到入侵数据 
+[2022-08-25 17:59:15.7745][Info][WmsApi.Controllers.ParkingLotController] 收到入侵数据 
+[2022-08-25 18:02:35.7626][Info][WmsApi.Controllers.ParkingLotController] 收到入侵数据 

@@ -1,0 +1,16 @@
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Domain.deps.json
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Domain.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Domain.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Contracts.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Contracts.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.csproj.AssemblyReference.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.AssemblyInfoInputs.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.AssemblyInfo.cs
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.csproj.CoreCompileInputs.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\refint\WmsApi.Domain.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.Domain.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\ref\WmsApi.Domain.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\bin\Debug\net6.0\WmsApi.Contracts.xml
+D:\Desktop\PCRCode\WebApi\WmsApi.Domain\obj\Debug\net6.0\WmsApi.D.ECF7C9CA.Up2Date

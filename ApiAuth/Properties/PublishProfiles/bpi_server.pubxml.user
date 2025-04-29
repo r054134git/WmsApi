@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此文件由 Web 项目的发布/打包过程使用。可以通过编辑此 MSBuild 文件
+自定义此过程的行为。为了解与此相关的更多内容，请访问 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxD4Cx+nrME6HSWWQsLULEQAAAAACAAAAAAAQZgAAAAEAACAAAABE8FPy2gajK/HNQr89k01oE4nhZ18HTSWMVBAmPWMPnwAAAAAOgAAAAAIAACAAAAAJLwA7Gr29hSY0q33GnZ+bubA2NKqh7Wr6yQw9g1X5iyAAAACBBj/UNsq79rKNltpN+fCDy6yrcaktOCpwB3Vp8YAvtEAAAAA6DOhKTa6FSpPe4qzy7YC8yhEX1Ot1Ywvo8SM5OJbDDuCvDkAFsVJPdiVLDTb4dvlKnaXu5+6AoYPTKUCgLVhB</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>server=localhost%3bport=3306%3buser id=wms%3bpwd=PcrDb123%25%3bdatabase=wmspcr%3bsslmode=none%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

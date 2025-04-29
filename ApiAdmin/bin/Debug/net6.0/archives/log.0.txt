@@ -1,0 +1,151 @@
+[2024-10-28 13:55:46.8397][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2024-10-28 13:55:47.3756][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2024-10-28 13:55:47.7198][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiAdmin 
+[2024-10-28 13:55:47.7198][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+[2024-10-28 13:55:47.7198][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2024-10-28 13:55:47.7352][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2024-10-28 13:55:47.7670][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2024-10-28 13:55:47.7670][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiAdmin 
+[2024-10-28 13:55:47.7670][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2024-10-28 13:55:47.7851][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/index.html - - 
+[2024-10-28 13:55:48.1170][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2024-10-28 13:55:48.1213][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:48.4902][Debug][Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware] Response markup is scheduled to include Browser Link script injection. 
+[2024-10-28 13:55:48.4967][Debug][Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Response markup is scheduled to include browser refresh script injection. 
+[2024-10-28 13:55:48.5791][Debug][Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware] Response markup was updated to include Browser Link script injection. 
+[2024-10-28 13:55:48.5791][Debug][Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Response markup was updated to include browser refresh script injection. 
+[2024-10-28 13:55:48.5929][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/index.html - - - 200 - text/html;charset=utf-8 809.1136ms 
+[2024-10-28 13:55:48.6470][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/_framework/aspnetcore-browser-refresh.js - - 
+[2024-10-28 13:55:48.6470][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/_vs/browserLink - - 
+[2024-10-28 13:55:48.6580][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/_framework/aspnetcore-browser-refresh.js - - - 200 11974 application/javascript;+charset=utf-8 10.5380ms 
+[2024-10-28 13:55:48.7849][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-bundle.js.map - - 
+[2024-10-28 13:55:48.7849][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:48.7849][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-bundle.js.map does not match an existing file 
+[2024-10-28 13:55:48.8309][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin/swagger-ui-bundle.js.map' 
+[2024-10-28 13:55:48.8309][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 13:55:48.8387][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-bundle.js.map - - - 404 - - 53.8122ms 
+[2024-10-28 13:55:48.8599][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-bundle.js.map - - 
+[2024-10-28 13:55:48.8599][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:48.8599][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-bundle.js.map does not match an existing file 
+[2024-10-28 13:55:48.8717][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin/swagger-ui-bundle.js.map' 
+[2024-10-28 13:55:48.8717][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 13:55:48.8717][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-bundle.js.map - - - 404 - - 16.0969ms 
+[2024-10-28 13:55:48.9631][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-standalone-preset.js.map - - 
+[2024-10-28 13:55:48.9644][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:48.9644][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+[2024-10-28 13:55:48.9644][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin/swagger-ui-standalone-preset.js.map' 
+[2024-10-28 13:55:48.9644][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 13:55:48.9644][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-standalone-preset.js.map - - - 404 - - 10.2475ms 
+[2024-10-28 13:55:48.9898][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-standalone-preset.js.map - - 
+[2024-10-28 13:55:48.9898][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 345.6009ms 
+[2024-10-28 13:55:48.9898][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:48.9974][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+[2024-10-28 13:55:48.9974][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin/swagger-ui-standalone-preset.js.map' 
+[2024-10-28 13:55:48.9974][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 13:55:48.9974][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/swagger-ui-standalone-preset.js.map - - - 404 - - 14.2103ms 
+[2024-10-28 13:55:49.0820][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/v1/swagger.json - - 
+[2024-10-28 13:55:49.0820][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 13:55:49.4965][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/v1/swagger.json - - - 200 - application/json;charset=utf-8 414.4617ms 
+[2024-10-28 14:00:13.7212][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2024-10-28 14:00:14.2121][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2024-10-28 14:00:14.5948][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiAdmin 
+[2024-10-28 14:00:14.5948][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+[2024-10-28 14:00:14.5948][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2024-10-28 14:00:14.6149][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2024-10-28 14:00:14.6477][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2024-10-28 14:00:14.6477][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiAdmin 
+[2024-10-28 14:00:14.6525][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2024-10-28 14:00:14.6769][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin/index.html - - 
+[2024-10-28 14:00:14.9794][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2024-10-28 14:00:14.9843][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:00:15.3075][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path  does not match the path filter 
+[2024-10-28 14:00:15.3520][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin/index.html' 
+[2024-10-28 14:00:15.6541][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:00:15.7065][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin/index.html - - - 404 - - 1033.0524ms 
+[2024-10-28 14:03:49.0267][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2024-10-28 14:03:49.5023][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2024-10-28 14:03:49.8835][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiAdmin 
+[2024-10-28 14:03:49.8835][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+[2024-10-28 14:03:49.8863][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2024-10-28 14:03:49.8863][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2024-10-28 14:03:49.9272][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2024-10-28 14:03:49.9272][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiAdmin 
+[2024-10-28 14:03:49.9272][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2024-10-28 14:03:49.9485][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22 - - 
+[2024-10-28 14:03:50.2415][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2024-10-28 14:03:50.2415][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:03:50.5178][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path  does not match the path filter 
+[2024-10-28 14:03:50.5565][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin22' 
+[2024-10-28 14:03:50.5586][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:03:50.6090][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22 - - - 404 - - 662.0674ms 
+[2024-10-28 14:04:37.2799][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2024-10-28 14:04:37.7064][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2024-10-28 14:04:38.0196][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiAdmin 
+[2024-10-28 14:04:38.0196][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+[2024-10-28 14:04:38.0349][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2024-10-28 14:04:38.0349][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2024-10-28 14:04:38.0656][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2024-10-28 14:04:38.0656][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiAdmin 
+[2024-10-28 14:04:38.0656][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2024-10-28 14:04:38.0868][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22 - - 
+[2024-10-28 14:04:38.3711][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2024-10-28 14:04:38.3711][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:38.7035][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/index.html - - 
+[2024-10-28 14:04:38.7227][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22 - - - 301 - - 626.3427ms 
+[2024-10-28 14:04:38.7227][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:38.8324][Debug][Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware] Response markup is scheduled to include Browser Link script injection. 
+[2024-10-28 14:04:38.8390][Debug][Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Response markup is scheduled to include browser refresh script injection. 
+[2024-10-28 14:04:38.8819][Debug][Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware] Response markup was updated to include Browser Link script injection. 
+[2024-10-28 14:04:38.8819][Debug][Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Response markup was updated to include browser refresh script injection. 
+[2024-10-28 14:04:38.8864][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/index.html - - - 200 - text/html;charset=utf-8 182.8961ms 
+[2024-10-28 14:04:38.9308][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/_framework/aspnetcore-browser-refresh.js - - 
+[2024-10-28 14:04:38.9374][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js - - 
+[2024-10-28 14:04:38.9308][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui.css - - 
+[2024-10-28 14:04:38.9546][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:38.9546][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js - - 
+[2024-10-28 14:04:38.9668][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/_vs/browserLink - - 
+[2024-10-28 14:04:38.9668][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:38.9794][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:38.9794][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/_framework/aspnetcore-browser-refresh.js - - - 200 11974 application/javascript;+charset=utf-8 53.2872ms 
+[2024-10-28 14:04:38.9794][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2024-10-28 14:04:38.9794][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2024-10-28 14:04:38.9794][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2024-10-28 14:04:39.0323][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+[2024-10-28 14:04:39.0323][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+[2024-10-28 14:04:39.0468][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+[2024-10-28 14:04:39.0468][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 114.3895ms 
+[2024-10-28 14:04:39.0468][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui.css - - - 200 142933 text/css 120.9232ms 
+[2024-10-28 14:04:39.0814][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js - - - 200 986342 application/javascript 126.8939ms 
+[2024-10-28 14:04:39.1195][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 152.9882ms 
+[2024-10-28 14:04:39.2187][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js.map - - 
+[2024-10-28 14:04:39.2187][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.2187][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-bundle.js.map does not match an existing file 
+[2024-10-28 14:04:39.2612][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin22/swagger-ui-bundle.js.map' 
+[2024-10-28 14:04:39.2612][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:04:39.2612][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js.map - - - 404 - - 49.4261ms 
+[2024-10-28 14:04:39.2914][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js.map - - 
+[2024-10-28 14:04:39.2914][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.2914][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-bundle.js.map does not match an existing file 
+[2024-10-28 14:04:39.2914][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin22/swagger-ui-bundle.js.map' 
+[2024-10-28 14:04:39.2914][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:04:39.2914][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-bundle.js.map - - - 404 - - 7.9181ms 
+[2024-10-28 14:04:39.3923][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js.map - - 
+[2024-10-28 14:04:39.3923][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.3923][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+[2024-10-28 14:04:39.3923][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin22/swagger-ui-standalone-preset.js.map' 
+[2024-10-28 14:04:39.3923][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:04:39.4010][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js.map - - - 404 - - 8.6272ms 
+[2024-10-28 14:04:39.4010][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js.map - - 
+[2024-10-28 14:04:39.4010][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.4010][Debug][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+[2024-10-28 14:04:39.4010][Debug][Microsoft.AspNetCore.Routing.Matching.DfaMatcher] No candidates found for the request path '/admin22/swagger-ui-standalone-preset.js.map' 
+[2024-10-28 14:04:39.4010][Debug][Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware] Request did not match any endpoints 
+[2024-10-28 14:04:39.4010][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/swagger-ui-standalone-preset.js.map - - - 404 - - 9.3839ms 
+[2024-10-28 14:04:39.4944][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/v1/swagger.json - - 
+[2024-10-28 14:04:39.4961][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.5286][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:4768/admin22/favicon-32x32.png - - 
+[2024-10-28 14:04:39.5286][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2024-10-28 14:04:39.5286][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2024-10-28 14:04:39.5286][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+[2024-10-28 14:04:39.5286][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/favicon-32x32.png - - - 200 628 image/png 7.4383ms 
+[2024-10-28 14:04:39.8867][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:4768/admin22/v1/swagger.json - - - 200 - application/json;charset=utf-8 392.3421ms 

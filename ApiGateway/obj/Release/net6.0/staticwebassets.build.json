@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "PJ0EWchsA3yr/zFlXruPqt5KrLF2dWGuZrkaPUg6F5M=",
+  "Source": "ApiGateway",
+  "BasePath": "_content/ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiGateway\\wwwroot",
+      "Source": "ApiGateway",
+      "ContentRoot": "D:\\Desktop\\PCRCode\\WebApi\\ApiGateway\\wwwroot\\",
+      "BasePath": "_content/ApiGateway",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Desktop\\PCRCode\\WebApi\\ApiGateway\\wwwroot\\index.html",
+      "SourceId": "ApiGateway",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\PCRCode\\WebApi\\ApiGateway\\wwwroot\\",
+      "BasePath": "_content/ApiGateway",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

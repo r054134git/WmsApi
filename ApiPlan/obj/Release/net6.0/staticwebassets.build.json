@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ImxlBUhUQSEkkDCht9mRDbtv+BgsN2rXg0KLg+PlB9A=",
+  "Source": "ApiPlan",
+  "BasePath": "_content/ApiPlan",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

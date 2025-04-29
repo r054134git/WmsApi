@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiStore</name>
+    </assembly>
+    <members>
+        <member name="M:WmsApi.Controllers.TWhAreaController.SendMesInfo(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            创建库区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhAreaController.GetPageQuery(WmsApi.PageParam,System.String[],System.Int32[],System.Int32[],System.Threading.CancellationToken)">
+            <summary>
+            区域筛选
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhBayController.GetAllList(System.Threading.CancellationToken)">
+            <summary>
+            获取所有的跨列表
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.GetPageQuery(WmsApi.PageParam,System.String[],System.String[],System.String[],System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Threading.CancellationToken)">
+            <summary>
+            库位信息筛选
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.UpdateLocationDisabled(System.String[],System.String,System.Threading.CancellationToken)">
+            <summary>
+            库位批量禁用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.UpdateLocationIsEnable(System.String[],System.String,System.Threading.CancellationToken)">
+            <summary>
+            库位批量启用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.BatchUpdateLocationXY(WmsApi.Contracts.BatchAdjustXyParam,System.Threading.CancellationToken)">
+            <summary>
+            批量更新鞍座行列坐标
+            </summary>
+            <param name="param"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.BatchUpdateLocationSpacing(WmsApi.Contracts.BatchSpacingParam,System.Threading.CancellationToken)">
+            <summary>
+            批量更改鞍座行间距
+            </summary>
+            <param name="param"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.SendMesInfo(WmsApi.Contracts.Models.TWhLocationCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            创建库位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.UpdateLocationBuss(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            批量更新区域类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.UpdateLocationStorageType(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            批量更新库位类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhLocationController.GetListOfLocation(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取列号
+            </summary>
+            <param name="stackId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TWhStackController.GetPageQuery(WmsApi.PageParam,System.String[],System.String[],System.Int32[],System.Int32[],System.Nullable{System.Int32}[],System.Int32[],System.Nullable{System.Int32}[],System.Threading.CancellationToken)">
+            <summary>
+            垛位筛选
+            </summary>
+            <param name="pageParam"></param>
+            <param name="bayId"></param>
+            <param name="ownerId"></param>
+            <param name="orientation"></param>
+            <param name="type"></param>
+            <param name="isLockable"></param>
+            <param name="loadOrder"></param>
+            <param name="isEnable"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

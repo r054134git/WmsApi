@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="6.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WmsApi.Contracts\WmsApi.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Cds.Contracts">
+      <HintPath>..\..\WmcsServer\libs\Cds.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonContracts">
+      <HintPath>..\libs\CommonContracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Ucp.Contracts">
+      <HintPath>..\libs\Ucp.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Ucp.Contracts">
+      <HintPath>..\libs\Ucp.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

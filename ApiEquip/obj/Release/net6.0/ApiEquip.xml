@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiEquip</name>
+    </assembly>
+    <members>
+        <member name="M:WmsApi.Controllers.TEqCraneController.SendCraneCmd(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            行车前往待机位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TEqCrossVehicleController.GetCrossCar(System.String,System.Threading.CancellationToken)">
+            <summary>
+            各课过跨车
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TEqCrossVehicleController.SendCrossTrainMove(System.String,System.String,System.Int32)">
+            <summary>
+            过跨车去向发送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TEqCrossVehicleController.GetElectronicVehicle(System.Threading.CancellationToken)">
+            <summary>
+            获取电瓶车
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

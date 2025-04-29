@@ -1,0 +1,1 @@
+start ./EntityFrameworkCore.Generator.exe generate

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "wpdqCxIUoOiwBgN+GPthgH93AUSBNvlt4HkByTiyxZU=",
+  "Source": "ApiTracker",
+  "BasePath": "_content/ApiTracker",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

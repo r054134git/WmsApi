@@ -1,0 +1,21 @@
+[2022-08-03 19:38:27.9397][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2022-08-03 19:38:28.4301][Debug][MassTransit.Transports.BusDepot] Starting bus instances: IBus 
+[2022-08-03 19:38:28.4463][Debug][MassTransit] Starting bus: rabbitmq://10.11.1.3/wms 
+[2022-08-03 19:38:28.6394][Debug][MassTransit] Connect: wms@10.11.1.3:5672/wms 
+[2022-08-03 19:38:28.9913][Debug][MassTransit] Connected: wms@10.11.1.3:5672/wms (address: amqp://10.11.1.3:5672, local: 53707) 
+[2022-08-03 19:38:29.1519][Debug][MassTransit] Endpoint Ready: rabbitmq://10.11.1.3/wms/LAPTOPMBH38CS0_iisexpress_bus_qu7oyyfrwzh8kkmnbdp8ktfxbf?temporary=true 
+[2022-08-03 19:38:29.1589][Info][MassTransit] Bus started: rabbitmq://10.11.1.3/wms 
+[2022-08-03 19:38:29.1589][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2022-08-03 19:38:29.4650][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiPlan 
+[2022-08-03 19:38:29.4695][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2022-08-03 19:38:29.4695][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-08-03 19:38:29.4843][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-08-03 19:38:29.4843][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiPlan 
+[2022-08-03 19:38:29.4843][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2022-08-03 19:38:29.5279][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/index.html - - 
+[2022-08-03 19:38:29.5580][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2022-08-03 19:38:29.5580][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-08-03 19:38:30.1646][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/index.html - - - 200 - text/html;charset=utf-8 638.5083ms 
+[2022-08-03 19:38:30.3104][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/v1/swagger.json - - 
+[2022-08-03 19:38:30.3104][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-08-03 19:38:30.6192][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/v1/swagger.json - - - 200 - application/json;charset=utf-8 308.7828ms 

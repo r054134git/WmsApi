@@ -1,0 +1,1560 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EntityFrameworkCore.Generator.Core</name>
+    </assembly>
+    <members>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Indicates whether the specified String object is null or an empty string
+            </summary>
+            <param name="item">A String reference</param>
+            <returns>
+                <c>true</c> if is null or empty; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            Indicates whether a specified string is null, empty, or consists only of white-space characters
+            </summary>
+            <param name="item">A String reference</param>
+            <returns>
+                 <c>true</c> if is null or empty; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.HasValue(System.String)">
+            <summary>
+            Determines whether the specified string is not <see cref="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.IsNullOrEmpty(System.String)"/>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns>
+              <c>true</c> if the specified <paramref name="value"/> is not <see cref="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.IsNullOrEmpty(System.String)"/>; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.IsMixedCase(System.String)">
+            <summary>
+            Does string contain both uppercase and lowercase characters?
+            </summary>
+            <param name="s">The value.</param>
+            <returns>True if contain mixed case.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.ToCamelCase(System.String)">
+            <summary>
+            Converts a string to use camelCase.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The to camel case. </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.ToPascalCase(System.String)">
+            <summary>
+            Converts a string to use PascalCase.
+            </summary>
+            <param name="value">Text to convert</param>
+            <returns>The string</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Extensions.StringExtensions.ToPascalCase(System.String,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Converts a string to use PascalCase.
+            </summary>
+            <param name="value">Text to convert</param>
+            <param name="splitRegex">Regular Expression to split words on.</param>
+            <returns>The string</returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.GeneratorOptionsSerializer">
+            <summary>
+            Serialization and Deserialization for the <see cref="T:EntityFrameworkCore.Generator.Options.GeneratorOptions"/> class
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.GeneratorOptionsSerializer.#ctor(Microsoft.Extensions.Logging.ILogger{EntityFrameworkCore.Generator.GeneratorOptionsSerializer})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.GeneratorOptionsSerializer"/> class.
+            </summary>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.GeneratorOptionsSerializer.OptionsFileName">
+            <summary>
+            The options file name. Default 'generation.yml'
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.GeneratorOptionsSerializer.Load(System.String,System.String)">
+            <summary>
+            Loads the options file using the specified <paramref name="directory"/> and <paramref name="file"/>.
+            </summary>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns>An instance of <see cref="T:EntityFrameworkCore.Generator.Options.GeneratorOptions"/> if the file exists; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.GeneratorOptionsSerializer.Save(EntityFrameworkCore.Generator.Options.GeneratorOptions,System.String,System.String)">
+            <summary>
+            Saves the generator options to the specified <paramref name="directory"/> and <paramref name="file"/>.
+            </summary>
+            <param name="generatorOptions">The generator options to save.</param>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns>The full path of the options file.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.GeneratorOptionsSerializer.Exists(System.String,System.String)">
+            <summary>
+            Determines if the specified options file exists.
+            </summary>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns><c>true</c> if options file exits; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.IGeneratorOptionsSerializer">
+            <summary>
+            <c>interface</c> for serialization and deserialization of <see cref="T:EntityFrameworkCore.Generator.Options.GeneratorOptions"/> class
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.IGeneratorOptionsSerializer.Load(System.String,System.String)">
+            <summary>
+            Loads the options file using the specified <paramref name="directory"/> and <paramref name="file"/>.
+            </summary>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns>An instance of <see cref="T:EntityFrameworkCore.Generator.Options.GeneratorOptions"/> if the file exists; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.IGeneratorOptionsSerializer.Save(EntityFrameworkCore.Generator.Options.GeneratorOptions,System.String,System.String)">
+            <summary>
+            Saves the generator options to the specified <paramref name="directory"/> and <paramref name="file"/>.
+            </summary>
+            <param name="generatorOptions">The generator options to save.</param>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns>The full path of the options file.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.IGeneratorOptionsSerializer.Exists(System.String,System.String)">
+            <summary>
+            Determines if the specified options file exists.
+            </summary>
+            <param name="directory">The directory where the file is located.</param>
+            <param name="file">The name of the options file.</param>
+            <returns><c>true</c> if options file exits; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.IOptionVariable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.IOptionVariable.Set(EntityFrameworkCore.Generator.VariableDictionary)">
+            <summary>
+            Sets variables on the specified VariableDictionary.
+            </summary>
+            <param name="variableDictionary">The variable dictionary.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.IOptionVariable.Remove(EntityFrameworkCore.Generator.VariableDictionary)">
+            <summary>
+            Removes variables on the specified VariableDictionary.
+            </summary>
+            <param name="variableDictionary">The variable dictionary.</param>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity">
+            <summary>
+            An entity model for a database table used when reverse engineering an existing database.
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.Entity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Context">
+            <summary>
+            Gets or sets the parent <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.EntityContext"/> this entity belong to.
+            </summary>
+            <value>
+            The parent context this entity belongs to.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.ContextProperty">
+            <summary>
+            Gets or sets the property name for this entity on the data context.
+            </summary>
+            <value>
+            The property name for this entity on the data context.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.EntityNamespace">
+            <summary>
+            Gets or sets the entity namespace.
+            </summary>
+            <value>
+            The entity namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.EntityClass">
+            <summary>
+            Gets or sets the name of the entity class.
+            </summary>
+            <value>
+            The name of the entity class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.EntityBaseClass">
+            <summary>
+            Gets or sets the entity base class.
+            </summary>
+            <value>
+            The entity base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.MappingNamespace">
+            <summary>
+            Gets or sets the mapping namespace.
+            </summary>
+            <value>
+            The mapping namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.MappingClass">
+            <summary>
+            Gets or sets the name of the table mapping class.
+            </summary>
+            <value>
+            The name of the table mapping class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.MapperClass">
+            <summary>
+            Gets or sets the mapper class.
+            </summary>
+            <value>
+            The mapper class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.MapperNamespace">
+            <summary>
+            Gets or sets the mapper namespace.
+            </summary>
+            <value>
+            The mapper namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.MapperBaseClass">
+            <summary>
+            Gets or sets the mapper base class.
+            </summary>
+            <value>
+            The mapper base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.TableSchema">
+            <summary>
+            Gets or sets the table schema.
+            </summary>
+            <value>
+            The table schema.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.TableName">
+            <summary>
+            Gets or sets the name of the table.
+            </summary>
+            <value>
+            The name of the table.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Properties">
+            <summary>
+            Gets or sets the entity's properties.
+            </summary>
+            <value>
+            The entity's properties.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Relationships">
+            <summary>
+            Gets or sets the entity's relationships.
+            </summary>
+            <value>
+            The entity's relationships.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Methods">
+            <summary>
+            Gets or sets the entity's methods.
+            </summary>
+            <value>
+            The entity's methods.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Models">
+            <summary>
+            Gets or sets the models for this entity.
+            </summary>
+            <value>
+            The models for this entity.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.IsView">
+            <summary>
+            Gets or sets a value indicating whether this instance is view.
+            </summary>
+            <value>
+              <c>true</c> if this instance is view; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Entity.Comment">
+            <summary>
+            数据库表的注释
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection">
+            <summary>
+            A collection of <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity"/>
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.#ctor(System.Collections.Generic.IEnumerable{EntityFrameworkCore.Generator.Metadata.Generation.Entity})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection"/> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection"/> class.
+            </summary>
+            <param name="capacity">The number of elements that the new list can initially store.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.ByTable(System.String,System.String)">
+            <summary>
+            Get <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity" /> with the specified table <paramref name="tableName" /> and <paramref name="tableSchema" />.
+            </summary>
+            <param name="tableName">The name of the table.</param>
+            <param name="tableSchema">The table schema.</param>
+            <returns>
+            The <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity" /> with the specified table <paramref name="tableName" /> and <paramref name="tableSchema" />.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.EntityCollection.ByClass(System.String)">
+            <summary>
+            Get <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity" /> with the specified <paramref name="className" />.
+            </summary>
+            <param name="className">Name of the class.</param>
+            <returns>
+            The <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Entity" /> with the specified <paramref name="className" />.
+            </returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection">
+            <summary>
+            A collection of <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Method"/> instances
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection.#ctor(System.Collections.Generic.IEnumerable{EntityFrameworkCore.Generator.Metadata.Generation.Method})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection"/> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection"/> class.
+            </summary>
+            <param name="capacity">The number of elements that the new list can initially store.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.MethodCollection.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelBase">
+            <summary>
+            A base class for entity generation models
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.ModelBase.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection">
+            <summary>
+            A collection of <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Model"/>
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection.#ctor(System.Collections.Generic.IEnumerable{EntityFrameworkCore.Generator.Metadata.Generation.Model})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection"/> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection"/> class.
+            </summary>
+            <param name="capacity">The number of elements that the new list can initially store.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.ModelCollection.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.Property.Comment">
+            <summary>
+            数据库字段的注释
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection">
+            <summary>
+            A collection of <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Property"/> instances
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.#ctor(System.Collections.Generic.IEnumerable{EntityFrameworkCore.Generator.Metadata.Generation.Property})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection"/> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.#ctor(System.Collections.Generic.List{EntityFrameworkCore.Generator.Metadata.Generation.Property})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection"/> class.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.PrimaryKeys">
+            <summary>
+            Gets the primary keys properties.
+            </summary>
+            <value>
+            The primary keys properties.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.ForeignKeys">
+            <summary>
+            Gets the foreign keys properties.
+            </summary>
+            <value>
+            The foreign keys.
+            </value>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.ByColumn(System.String)">
+            <summary>
+            Gets the property by column name
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.PropertyCollection.ByProperty(System.String)">
+            <summary>
+            Gets the property by property name
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection">
+            <summary>
+            A collection of <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.Relationship"/> instances
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.#ctor(System.Collections.Generic.IEnumerable{EntityFrameworkCore.Generator.Metadata.Generation.Relationship})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection"/> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection"/> class.
+            </summary>
+            <param name="capacity">The number of elements that the new list can initially store.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.IsProcessed">
+            <summary>
+            Gets or sets a value indicating whether this instance is processed.
+            </summary>
+            <value>
+              <c>true</c> if this instance is processed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.ByName(System.String)">
+            <summary>
+            Gets a relationship by name.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Metadata.Generation.RelationshipCollection.ByProperty(System.String)">
+            <summary>
+            Gets a relationship by the property name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase">
+            <summary>
+            Base class for Class generation
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ClassOptionsBase.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ClassOptionsBase.Namespace">
+            <summary>
+            Gets or sets the class namespace.
+            </summary>
+            <value>
+            The class namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ClassOptionsBase.Directory">
+            <summary>
+            Gets or sets the output directory.  Default is the current working directory.
+            </summary>
+            <value>
+            The output directory.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ClassOptionsBase.Document">
+            <summary>
+            Gets or sets a value indicating whether to create xml documentation.
+            </summary>
+            <value>
+              <c>true</c> to create xml documentation; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ContextClassOptions">
+            <summary>
+            EntityFramework <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> generation options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ContextClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ContextClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ContextClassOptions.Name">
+            <summary>
+            Gets or sets the class name for the generated <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> file.
+            </summary>
+            <value>
+            The class name for the <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> file.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ContextClassOptions.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from. Default is <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ContextClassOptions.PropertyNaming">
+            <summary>
+            Gets or sets the property naming strategy for entity data set property.
+            </summary>
+            <value>
+            The property naming strategy for entity data set property.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ContextNaming">
+            <summary>
+            Naming strategies for entity data set property on the generated <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.ContextNaming.Preserve">
+            <summary>
+            Preserve the entity name as is
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.ContextNaming.Plural">
+            <summary>
+            Convert the entity to plural form
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.ContextNaming.Suffix">
+            <summary>
+            Add 'DataSet' to the end of the entity name.
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.CreateModelOptions">
+            <summary>
+            Create model file generation options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ModelOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.CreateModelOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.CreateModelOptions"/> class.
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.DatabaseOptions">
+            <summary>
+            Database options for reverse engineering the database
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.DatabaseOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.DatabaseOptions"/> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.Name">
+            <summary>
+            Gets or sets the name of the database.
+            </summary>
+            <value>
+            The name of the database.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.Provider">
+            <summary>
+            Gets or sets the database to generate code for.
+            </summary>
+            <value>
+            The database to generate code for.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.ConnectionString">
+            <summary>
+            Gets or sets the connection string for reverse engineering the database
+            </summary>
+            <value>
+            The connection string for reverse engineering the database
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.ConnectionName">
+            <summary>
+            Gets or sets the name of the connection in the user secret file.
+            </summary>
+            <value>
+            The name of the connection.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.UserSecretsId">
+            <summary>
+            Gets or sets the user secrets identifier. A user secrets ID is unique value used to store and identify a collection of secret configuration values.
+            </summary>
+            <value>
+            The user secrets identifier.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.TableNaming">
+            <summary>
+            Gets or sets the table naming hint for how existing tables are named. This is used to determine if the name should be converted.
+            </summary>
+            <value>
+            The table naming hint for how tables are named.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.Tables">
+            <summary>
+            Gets or sets the tables to include in the model, or an empty enumerable to include all
+            </summary>
+            <value>
+            The tables to include in the model, or an empty enumerable to include all
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.Schemas">
+            <summary>
+            Gets or sets the schema to include in the model, or an empty enumerable to include all.
+            </summary>
+            <value>
+            The schema to include in the model, or an empty enumerable to include all.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DatabaseOptions.Exclude">
+            <summary>
+            Gets or sets the exclude table options.
+            </summary>
+            <value>
+            The exclude table options.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.DatabaseProviders">
+            <summary>
+            The database to generate code for
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.DatabaseProviders.SqlServer">
+            <summary>
+            The SQL server provider
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.DatabaseProviders.PostgreSQL">
+            <summary>
+            The PostgreSQL provider
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.DatabaseProviders.MySQL">
+            <summary>
+            The MySQL provider
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.DatabaseProviders.Sqlite">
+            <summary>
+            The sqlite provider
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.DatabaseProviders.Oracle">
+            <summary>
+            The Oracle provider
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.DataOptions">
+            <summary>
+            The data options group
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.DataOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.DataOptions" /> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DataOptions.Context">
+            <summary>
+            Gets or sets the data context generation options.
+            </summary>
+            <value>
+            The data context options
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DataOptions.Entity">
+            <summary>
+            Gets or sets the entity class generation options.
+            </summary>
+            <value>
+            The entity class generation options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DataOptions.Mapping">
+            <summary>
+            Gets or sets the mapping class generation options.
+            </summary>
+            <value>
+            The mapping class generation options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.DataOptions.Query">
+            <summary>
+            Gets or sets the query extension options.
+            </summary>
+            <value>
+            The query extension options.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.EntityClassOptions">
+            <summary>
+            EntityFramework entity class generation options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.EntityClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.EntityClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.EntityClassOptions.Name">
+            <summary>
+            Gets or sets the entity class name template.
+            </summary>
+            <value>
+            The entity class name template.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.EntityClassOptions.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.EntityClassOptions.EntityNaming">
+            <summary>
+            Gets or sets the entity class naming strategy.
+            </summary>
+            <value>
+            The entity class naming strategy.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.EntityClassOptions.RelationshipNaming">
+            <summary>
+            Gets or sets the relationship property naming strategy.
+            </summary>
+            <value>
+            The relationship property naming strategy.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.EntityClassOptions.PrefixWithSchemaName">
+            <summary>
+            If true prefix classname with schema name to prevent naming conflicts
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.EntityNaming">
+            <summary>
+            Entity class naming strategy
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.EntityNaming.Preserve">
+            <summary>
+            Use table name as entity name
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.EntityNaming.Plural">
+            <summary>
+            Use table name in plural form
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.EntityNaming.Singular">
+            <summary>
+            Use table name in singular form
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.GeneratorOptions">
+            <summary>
+            Top level generator configuration options
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.GeneratorOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.GeneratorOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.GeneratorOptions.Project">
+            <summary>
+            Gets or sets the project options.
+            </summary>
+            <value>
+            The project level options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.GeneratorOptions.Database">
+            <summary>
+            Gets or sets the options for reverse engineer the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.GeneratorOptions.Data">
+            <summary>
+            Gets or sets the EntityFramework configuration options.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.GeneratorOptions.Model">
+            <summary>
+            Gets or sets the domain view model options.
+            </summary>
+            <value>
+            The model.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.GeneratorOptions.Script">
+            <summary>
+            Gets or sets the script template options.
+            </summary>
+            <value>
+            The script template options.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.MapperClassOptions">
+            <summary>
+            View model mapper class options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MapperClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.MapperClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MapperClassOptions.Generate">
+            <summary>
+            Gets or sets a value indicating whether this option is generated.
+            </summary>
+            <value>
+              <c>true</c> to generate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MapperClassOptions.overwrite">
+            <summary>
+            Gets or sets a value indicating whether the generated file will be over written.
+            </summary>
+            <value>
+              <c>true</c> to overwrite generated file; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MapperClassOptions.Name">
+            <summary>
+            Gets or sets the mapper class name template.
+            </summary>
+            <value>
+            The mapper class name template.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MapperClassOptions.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.MappingClassOptions">
+            <summary>
+            EntityFramework mapping class generation options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MappingClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.MappingClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.MatchOptions">
+            <summary>
+            String match options
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MatchOptions.Exact">
+            <summary>
+            Gets or sets the exact string match option.
+            </summary>
+            <value>
+            The exact string match option.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.MatchOptions.Expression">
+            <summary>
+            Gets or sets the regular expression pattern match option.
+            </summary>
+            <value>
+            The regular expression pattern match option.
+            </value>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MatchOptions.IsMatch(System.String)">
+            <summary>
+            Determines whether the specified value is a match.
+            </summary>
+            <param name="value">The value to match.</param>
+            <returns>
+              <c>true</c> if the specified value is a match; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MatchOptions.op_Implicit(System.String)~EntityFrameworkCore.Generator.Options.MatchOptions">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.String"/> to <see cref="T:EntityFrameworkCore.Generator.Options.MatchOptions"/>.
+            </summary>
+            <param name="value">The value to use for conversion.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MatchOptions.Equals(EntityFrameworkCore.Generator.Options.MatchOptions)">
+            <summary>
+            Determines whether the specified <see cref="T:EntityFrameworkCore.Generator.Options.MatchOptions" />, is equal to this instance.
+            </summary>
+            <param name="other">The <see cref="T:EntityFrameworkCore.Generator.Options.MatchOptions" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:EntityFrameworkCore.Generator.Options.MatchOptions" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MatchOptions.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.MatchOptions.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ModelOptions">
+            <summary>
+            Model options group
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ModelOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ModelOptions" /> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Shared">
+            <summary>
+            Gets or sets the shared options between read,create and update models
+            </summary>
+            <value>
+            The shared options between read,create and update models.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Read">
+            <summary>
+            Gets or sets the read model options.
+            </summary>
+            <value>
+            The read model options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Create">
+            <summary>
+            Gets or sets the create model options.
+            </summary>
+            <value>
+            The create model options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Update">
+            <summary>
+            Gets or sets the update model options.
+            </summary>
+            <value>
+            The update model options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Mapper">
+            <summary>
+            Gets or sets the view model mapper options.
+            </summary>
+            <value>
+            The view model mapper options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptions.Validator">
+            <summary>
+            Gets or sets the model validator options.
+            </summary>
+            <value>
+            The model validator options.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ModelOptionsBase">
+            <summary>
+            Base class for the Model generation
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ModelOptionsBase.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ModelOptionsBase"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptionsBase.Generate">
+            <summary>
+            Gets or sets a value indicating whether this option is generated.
+            </summary>
+            <value>
+              <c>true</c> to generate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptionsBase.Name">
+            <summary>
+            Gets or sets the class name template.
+            </summary>
+            <value>
+            The class name template.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptionsBase.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptionsBase.Include">
+            <summary>
+            Gets or sets the include selection options.
+            </summary>
+            <value>
+            The include selection options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ModelOptionsBase.Exclude">
+            <summary>
+            Gets or sets the exclude selection options.
+            </summary>
+            <value>
+            The exclude selection options.
+            </value>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.OptionsBase.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.OptionsBase" /> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ProjectOptions">
+            <summary>
+            Project options
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ProjectOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ProjectOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ProjectOptions.Namespace">
+            <summary>
+            Gets or sets the project root namespace.
+            </summary>
+            <value>
+            The project root namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ProjectOptions.Directory">
+            <summary>
+            Gets or sets the project directory.
+            </summary>
+            <value>
+            The project directory.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.QueryExtensionOptions">
+            <summary>
+            Query extensions options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.QueryExtensionOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.QueryExtensionOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.QueryExtensionOptions.Generate">
+            <summary>
+            Gets or sets a value indicating whether this option is generated.
+            </summary>
+            <value>
+              <c>true</c> to generate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.QueryExtensionOptions.IndexPrefix">
+            <summary>
+            Gets or sets the prefix of query method names.
+            </summary>
+            <value>
+            The prefix of query method names
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.QueryExtensionOptions.UniquePrefix">
+            <summary>
+            Gets or sets the prefix of unique query method names.
+            </summary>
+            <value>
+            The prefix of unique query method names.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ReadModelOptions">
+            <summary>
+            Read model options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ModelOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ReadModelOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ReadModelOptions"/> class.
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.RelationshipNaming">
+            <summary>
+            Relationship property naming strategy
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.RelationshipNaming.Preserve">
+            <summary>
+            Preserve property name as the entity name
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.RelationshipNaming.Plural">
+            <summary>
+            Convert the property name to the entity plural name
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.RelationshipNaming.Suffix">
+            <summary>
+            Add 'List' to the end of the entity name.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ScriptOptions.Context">
+            <summary>
+            Gets or sets the list context script templates.
+            </summary>
+            <value>The list context script templates.</value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ScriptOptions.Entity">
+            <summary>
+            Gets or sets the list entity script templates.
+            </summary>
+            <value>The list entity script templates.</value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ScriptOptions.Model">
+            <summary>
+            Gets or sets the list model script templates.
+            </summary>
+            <value>The list model script templates.</value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.SelectionOptions">
+            <summary>
+            Selection options
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.SelectionOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.SelectionOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SelectionOptions.Entities">
+            <summary>
+            Gets or sets a list of regular expression of entities to select.
+            </summary>
+            <value>
+            The list of regular expression of entities to select.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SelectionOptions.Properties">
+            <summary>
+            Gets or sets a list of regular expression of properties to select.
+            </summary>
+            <value>
+            The list of regular expression of properties to select.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.SharedModelOptions">
+             <summary>
+            
+             </summary>
+             <seealso cref="T:EntityFrameworkCore.Generator.Options.OptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.SharedModelOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.SharedModelOptions"/> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SharedModelOptions.Namespace">
+            <summary>
+            Gets or sets the class namespace.
+            </summary>
+            <value>
+            The class namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SharedModelOptions.Directory">
+            <summary>
+            Gets or sets the output directory.
+            </summary>
+            <value>
+            The output directory.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SharedModelOptions.Include">
+            <summary>
+            Gets or sets the include selection options.
+            </summary>
+            <value>
+            The include selection options.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.SharedModelOptions.Exclude">
+            <summary>
+            Gets or sets the exclude selection options.
+            </summary>
+            <value>
+            The exclude selection options.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.TableNaming">
+            <summary>
+            Table naming hint for how database tables are named.
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.TableNaming.Mixed">
+            <summary>
+            Mix of Plural and Singular
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.TableNaming.Plural">
+            <summary>
+            Tables are named in plural form
+            </summary>
+        </member>
+        <member name="F:EntityFrameworkCore.Generator.Options.TableNaming.Singular">
+            <summary>
+            Tables are named in singular form
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.TemplateOptions">
+            <summary>
+            Script Template options
+            </summary>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.TemplateOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.TemplateOptions"/> class.
+            </summary>
+            <param name="variables">The shared variables dictionary.</param>
+            <param name="prefix">The variable key prefix.</param>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.TemplatePath">
+            <summary>
+            Gets or sets the template file path.
+            </summary>
+            <value>
+            The template file path.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.FileName">
+            <summary>
+            Gets or sets the name of the class
+            </summary>
+            <value>
+            The name of the class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.Namespace">
+            <summary>
+            Gets or sets the class namespace.
+            </summary>
+            <value>
+            The class namespace.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.BaseClass">
+            <summary>
+            Gets or sets the base class.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.Directory">
+            <summary>
+            Gets or sets the output directory.  Default is the current working directory.
+            </summary>
+            <value>
+            The output directory.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.Overwrite">
+            <summary>
+            Gets or sets a value indicating whether the generated file will be over written.
+            </summary>
+            <value>
+              <c>true</c> to overwrite generated file; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.TemplateOptions.Parameters">
+            <summary>
+            Gets or sets the template parameters.
+            </summary>
+            <value>
+            The template parameters.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.UpdateModelOptions">
+            <summary>
+            Update model options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ModelOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.UpdateModelOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.UpdateModelOptions"/> class.
+            </summary>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ValidatorClassOptions">
+            <summary>
+            Validator class options
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ValidatorClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ValidatorClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ValidatorClassOptions.Generate">
+            <summary>
+            Gets or sets a value indicating whether this option is generated.
+            </summary>
+            <value>
+              <c>true</c> to generate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ValidatorClassOptions.Name">
+            <summary>
+            Gets or sets the validator class name template.
+            </summary>
+            <value>
+            The validator class name template.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ValidatorClassOptions.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.Options.ViewClassOptions">
+            <summary>
+            View class options.
+            </summary>
+            <seealso cref="T:EntityFrameworkCore.Generator.Options.ClassOptionsBase" />
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.Options.ViewClassOptions.#ctor(EntityFrameworkCore.Generator.VariableDictionary,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EntityFrameworkCore.Generator.Options.ViewClassOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ViewClassOptions.Generate">
+            <summary>
+            Gets or sets a value indicating whether this option is generated.
+            </summary>
+            <value>
+              <c>true</c> to generate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ViewClassOptions.BaseClass">
+            <summary>
+            Gets or sets the base class to inherit from.
+            </summary>
+            <value>
+            The base class.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.Options.ViewClassOptions.EntityNaming">
+            <summary>
+            Gets or sets the view class naming strategy.
+            </summary>
+            <value>
+            The view class naming strategy.
+            </value>
+        </member>
+        <member name="T:EntityFrameworkCore.Generator.VariableDictionary">
+            <summary>
+            Variable substitution dictionary
+            </summary>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.VariableDictionary.ShouldEvaluate">
+            <summary>
+            Gets or sets a value indicating whether <see cref="M:EntityFrameworkCore.Generator.VariableDictionary.Get(System.String)"/> should evaluate variable expressions.
+            </summary>
+            <value>
+              <c>true</c> if <see cref="M:EntityFrameworkCore.Generator.VariableDictionary.Get(System.String)"/> should evaluate; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:EntityFrameworkCore.Generator.VariableDictionary.Item(System.String)">
+            <summary>
+            Gets or sets a variable by name.
+            </summary>
+            <param name="name">The name of the variable to set.</param>
+            <returns>The current (evaluated) value of the variable.</returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Set(System.String,System.String)">
+            <summary>
+            Sets a variable value.
+            </summary>
+            <param name="name">The name of the variable.</param>
+            <param name="value">The value of the variable.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Set(EntityFrameworkCore.Generator.IOptionVariable)">
+            <summary>
+            Sets the specified option variable.
+            </summary>
+            <param name="optionVariable">The option variable.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Get(System.String)">
+            <summary>
+            Gets the value of a variable, or returns <c>null</c> if the variable is not defined. If the variable contains an expression, it will be evaluated first.
+            </summary>
+            <param name="name">The name of the variable.</param>
+            <returns>
+            The value of the variable, or <c>null</c> if the variable is not defined.
+            </returns>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Remove(System.String)">
+            <summary>
+            Removes the variable with specified name.
+            </summary>
+            <param name="name">The variable name.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Remove(EntityFrameworkCore.Generator.IOptionVariable)">
+            <summary>
+            Removes the specified option variable.
+            </summary>
+            <param name="optionVariable">The option variable.</param>
+        </member>
+        <member name="M:EntityFrameworkCore.Generator.VariableDictionary.Evaluate(System.String)">
+            <summary>
+            Evaluates the specified variable or text.
+            </summary>
+            <param name="variableOrText">The variable or text.</param>
+            <returns>The result of the variable.</returns>
+            <exception cref="T:System.FormatException">Invalid variable format</exception>
+        </member>
+    </members>
+</doc>

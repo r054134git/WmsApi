@@ -1,0 +1,648 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiTracker</name>
+    </assembly>
+    <members>
+        <member name="M:ApiTracker.ClientSocket.ConnectToServer(System.String,System.Int32)">
+            <summary>
+            连接服务器端
+            </summary>
+        </member>
+        <member name="M:ApiTracker.ClientSocket.SendMSGToServer(System.Byte[])">
+            <summary>
+            向服务器端发送消息
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.CarPreInPush">
+            <summary>
+            车辆预进厂数据推送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.CarPreOutPush">
+            <summary>
+            车辆预出厂数据推送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.CarOutConfirmPush">
+            <summary>
+            车辆确认出厂数据推送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.AesDecrypt(System.String,System.String)">
+            <summary>
+            ECB解密
+            </summary>
+            <param name="decData">加密数据</param>
+            <param name="key">秘钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.GateControl(WmsApi.Contracts.GateControlParas)">
+            <summary>
+            开关类型，1：开，2：关，3：停止，4：常开，5：常闭
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.GateOpenOrClose(System.String,System.Int32)">
+            <summary>
+            开关类型，1：开，2：关，3：停止，4：常开，5：常闭
+            </summary>
+            <param name="gateId"></param>
+            <param name="type">开关类型，1：开，2：关，3：停止，4：常开，5：常闭</param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.GatePlcOpenOrClose(System.String,System.Int32)">
+            <summary>
+            16库通过plc控制道闸，1：开，2：关
+            </summary>
+            <param name="gateId"></param>
+            <param name="type">1：开，2：关</param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.ParkingLotController.CameraAlarmPush">
+            <summary>
+            摄像头报警推送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WmsApi.Controllers.CameraInbreakResult">
+            <summary>
+            入侵摄像头推送的结果
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakResult.data">
+            <summary>
+            推送结果数据
+            </summary>
+        </member>
+        <member name="T:WmsApi.Controllers.CameraInbreakData">
+            <summary>
+            入侵摄像头推送数据
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.deviceCode">
+            <summary>
+            设备编码
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.deviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmChannelCode">
+            <summary>
+            通道编码
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmChannelName">
+            <summary>
+            通道名称
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmType">
+            <summary>
+            报警类型 302-绊线入侵  303-区域入侵
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmTime">
+            <summary>
+            报警时间
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmStat">
+            <summary>
+            报警状态 1-报警产生 2-报警消失
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CameraInbreakData.alarmPic1">
+            <summary>
+            报警抓图地址
+            </summary>
+        </member>
+        <member name="T:WmsApi.Controllers.CarPreComeIn">
+            <summary>
+            车辆预进厂推送类
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CarPreComeIn.carNum">
+            <summary>
+            进厂车牌号
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CarPreComeIn.sluiceDevChnId">
+            <summary>
+            道闸ID
+            </summary>
+        </member>
+        <member name="P:WmsApi.Controllers.CarPreComeIn.sluiceDevChnName">
+            <summary>
+            道闸名称
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.GetCraneData(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            大屏获取跨内行车数据
+            </summary>
+            <param name="bayId"></param>
+            <param name="craneId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.GetCraneDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持获取跨内行车数据
+            </summary>
+            <param name="craneId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.GetCranes(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取行车列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.UpdateCraneRunning(System.String,System.Int32,System.String)">
+            <summary>
+            更改行车运行状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.UpdateCraneOpMode(System.String,System.Int32,System.String)">
+            <summary>
+            更改行车运行模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.GetCraneCoilState(System.String,Cds.Contracts.StackTypes,System.Threading.CancellationToken)">
+            <summary>
+            获取行车吊卷状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCraneController.Login(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            行车登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCrossTrainController.GetCrossCar(System.String,System.Threading.CancellationToken)">
+            <summary>
+            各课过跨车
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCrossTrainController.GetElectronicVehicle(System.String,System.Threading.CancellationToken)">
+            <summary>
+            电瓶车信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCrossTrainController.UpdateIsLock(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            更改过跨车锁定状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrCrossTrainController.UpdateCrossTrainTaskType(System.String,System.Int32,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            过跨车作业类型更改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrEntryController.GetGateEntry(System.Threading.CancellationToken)">
+            <summary>
+            获取库门道闸
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrFenceDoorController.ScanOpenDoor(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持机扫码请求开门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLmMappingOfBay(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取跨内的库位钢卷对应关系
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.ReqMesMatInfo(System.String)">
+            <summary>
+            根据物料号请求MES卷信息
+            </summary>
+            <param name="materialNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllPageLMs(System.Threading.CancellationToken)">
+            <summary>
+            客户端库存信息
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateMaterialEdit(System.String,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            客户端库存信息编辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateMaterialState(System.String,System.String,WmsApi.Contracts.PackTypes,System.Int32,System.String,System.Threading.CancellationToken)">
+            <summary>
+            更改钢卷信息，库存状态
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateMaterial(System.String,System.String,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+            <summary>
+            盘库更改钢卷信息
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationMaterialByNo(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取库位/钢卷mapping
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetScanMaterial(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取扫描信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateScanLocation(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            扫码盘库更改库位信息
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            查询鞍座信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetStatOfAreas(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            库内各区域的库存统计
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetInventoryDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取报表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllColumns(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取列信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllRows(System.String,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取行信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetChainQuery(WmsApi.PageParam,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            客户端包装线跟踪
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.DeleteChainCoil(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            客户端删除包装线物料号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.AddChainCoil(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            客户端添加包装线物料号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.AddHoldChainCoil(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持机上料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.DeleteHoldChainCoil(System.String,System.String)">
+            <summary>
+            手持机下料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetPageQuery(WmsApi.PageParam,System.Int32[],System.String[],System.String[],System.String[],System.Int32[],System.String,System.Int32[],System.Threading.CancellationToken)">
+            <summary>
+            库存数据筛选
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetChainList(System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持端包装线跟踪数据
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllMaterials(System.String,System.Threading.CancellationToken)">
+            <summary>
+            客户端查询钢卷
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetHoldAllMaterials(System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持机查询卷号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllLocation(System.String,System.Threading.CancellationToken)">
+            <summary>
+            查询库位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationName(System.String,System.Threading.CancellationToken)">
+            <summary>
+            WPF获取库位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.SendMaterialInfo(System.String,System.Threading.CancellationToken)">
+            <summary>
+            发送请求卷号信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllAreaRows(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取行信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllTrolleybusCoils(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取电瓶车钢卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllCrossCarCoils(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取过跨车钢卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetAllTruckTransferCoils(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取汽车移库钢卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateTaskState(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            更改吊运任务冻结状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocMatList(System.String,System.Threading.CancellationToken)">
+            <summary>
+            车载终端获取跨库位信息用于生成库位图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetBayPercent(WmsApi.PageParam,System.Threading.CancellationToken)">
+            <summary>
+            库位统计查询--1,以跨为单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetStackPercent(WmsApi.PageParam,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            库位统计查询--2,以垛为单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.UpdateStackIsEnable(System.Threading.CancellationToken)">
+            <summary>
+            当鞍座禁用时，更新stack启用状态
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.CreateLDMatReportExcel(System.Threading.CancellationToken)">
+            <summary>
+            生成零点库存表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetHy(System.String)">
+            <summary>
+            火运
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLbnm(System.String)">
+            <summary>
+            岚北内贸
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLbwm(System.String)">
+            <summary>
+            岚北外贸
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetQy(System.String)">
+            <summary>
+            汽运
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetSqly(System.String)">
+            <summary>
+            水汽联运    数据不对
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetWd(System.String)">
+            <summary>
+            无单
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetYwz(System.String)">
+            <summary>
+            有主无单
+            </summary>
+            <param name="baycode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.CreateLDOrderReportExcel(System.Threading.CancellationToken)">
+            <summary>
+            生成零点订单表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLbnmOrder(System.String)">
+            <summary>
+            海运，岚北内贸,
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLbwmOrder(System.String)">
+            <summary>
+            外贸海运， 岚北外贸
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetListOfLocationRange(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            获取库位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetListOfLocationRangeOrder(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取同订单目标库位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetStackNo(System.String)">
+            <summary>
+            查询行号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationColNo(System.String)">
+            <summary>
+            查询列号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationType2(System.String)">
+            <summary>
+            查询该库位是否在库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetEndLocationYesBool(System.String,System.String)">
+            <summary>
+            判断选择的目标库位，，是否能大压小
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetStartFirstColNoSecondBool(System.String)">
+            <summary>
+            判断起始库位一层的上面是否有卷，是否允许吊
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetEndSecondColNoFirstBool(System.String)">
+            <summary>
+            判断目标库位二层的下面是否有卷，是否允许放
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetLocationTypes(WmsApi.Contracts.Models.BayAreaStackColRead,System.Threading.CancellationToken)">
+            <summary>
+            查询在库鞍座
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrLocationMaterialController.GetVcomparePageQuery(WmsApi.PageParam,System.String[],System.String,System.String,System.String,System.String,System.String,System.String[],System.String[],System.Threading.CancellationToken)">
+            <summary>
+            库存对比
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrMessageSendController.UpdateIsabled(System.String[],System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            批量启用/禁用=========重新发送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrNetworkController.RebootMoxa(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            重启moxa
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrNetworkController.RebootFlatScan(System.String,System.Threading.CancellationToken)">
+            <summary>
+            重启平扫
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrParkingPlaceController.UpdateGateParking(System.String,System.Threading.CancellationToken)">
+            <summary>
+            更改车位道闸开关
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrParkingPlaceController.GetGateParking(System.Threading.CancellationToken)">
+            <summary>
+            获取车位道闸
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrTruckBayQueueController.GetLoadTruckList(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            根据主要装车单查询排队车辆装车的卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TTrTruckController.GetAllTruckLines(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            获取当前进库汽车排队信息
+            </summary>
+            <param name="bayName">装卷仓库名称列表</param>
+            <param name="dispatchState">发送状态</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.ApiTrackerIGateApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.ApiTrackerIGateApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateApi.GateControl(WmsApi.Contracts.GateControlParas,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateApi.ApiTracker#IGateApi#GateControl(WmsApi.Contracts.GateControlParas,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.ApiTrackerIGateTokenApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.ApiTrackerIGateTokenApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateTokenApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateTokenApi.GetToken(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ApiTrackerIGateTokenApi.ApiTracker#IGateTokenApi#GetToken(System.String)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

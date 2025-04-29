@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "rhaOUrPyTaRp2n6fJz750Y0Nvc5NhEnFlIUxPK93VM0=",
+  "Source": "ApiStore",
+  "BasePath": "_content/ApiStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

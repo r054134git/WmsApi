@@ -1,0 +1,17 @@
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.csproj.AssemblyReference.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.AssemblyInfoInputs.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.AssemblyInfo.cs
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.csproj.CoreCompileInputs.cache
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Interfaces.deps.json
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Interfaces.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Interfaces.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\CommonContracts.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Contracts.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Contracts.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\WmsApi.Contracts.xml
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.Interfaces.pdb
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\Ucp.Contracts.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\bin\Debug\netstandard2.0\Cds.Contracts.dll
+D:\Desktop\PCRCode\WebApi\WmsApi.Interfaces\obj\Debug\netstandard2.0\WmsApi.I.7D7F4C8E.Up2Date

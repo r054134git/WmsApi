@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiPlan</name>
+    </assembly>
+    <members>
+        <member name="M:ApiPlan.Controllers.TPlAutoCodeController.CreatePlanId">
+            <summary>
+            创建计划编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlAutoCodeController.CreateTransferNo">
+            <summary>
+            创建计划编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBackReturnController.Delete(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            退库计划删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBackReturnController.CreatePlanId">
+            <summary>
+            创建计划编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.CreateBayPlan(WmsApi.Contracts.Models.TPlBayCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            创建库内倒垛计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.CreateBayPlanBatch(WmsApi.Contracts.Models.TPlBayBatchCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            批量创建库内倒垛计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.GetLibLocation(WmsApi.Contracts.Models.TPlBayBatchCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            获取在库鞍座
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.GetKongLocation(WmsApi.Contracts.Models.TPlBayBatchCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            获取空鞍座
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.CreatePlanId">
+            <summary>
+            创建计划编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.AddFinishLinePlan(System.String,System.Threading.CancellationToken)">
+            <summary>
+            创建精整上料倒垛计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.HoldCreatePlan(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持创建计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.UpdatePlanPriority(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            修改计划优先级
+            </summary>
+            <param name="bayId"></param>
+            <param name="materialNo"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.UpdateBayPlan(WmsApi.Contracts.Models.TPlBayUpdateModel,System.Threading.CancellationToken)">
+            <summary>
+            编辑库内倒垛计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.ResettingTask(System.String,System.Threading.CancellationToken)">
+            <summary>
+            客户端行车计划重置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.BatchResettingPlan(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            客户端批量重置计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.Delete(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            计划删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.PlanIsNotExist(System.String)">
+            <summary>
+            计划是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayController.CommClearLocMat(WmsApi.Domain.Entities.TTrLocationMaterial)">
+            <summary>
+            清除库存信息
+            </summary>
+            <param name="trLocMat"></param>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.CreateTransferPlan(WmsApi.Contracts.Models.TPlBayTransferCreateModel,System.Threading.CancellationToken)">
+            <summary>
+            客户端创建库间倒运计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.SendTransferInfo(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            发送倒运信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.ImportBayTransferData(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
+            <summary>
+            导入倒运钢卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.HoldCreateTransferPlan(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持创建电瓶车库间倒运计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.CreatePlanId">
+            <summary>
+            创建计划编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.GetTransferPlan(System.String,System.Threading.CancellationToken)">
+            <summary>
+            查询电瓶车计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.HoldDeleteTransferPlan(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持删除电瓶车倒运计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.CreatePlanCondition(System.String,System.Threading.CancellationToken)">
+            <summary>
+            判断计划不唯一
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.UpdateTransferPlan(WmsApi.Contracts.Models.TPlBayTransferUpdateModel,System.Threading.CancellationToken)">
+            <summary>
+            更新库间倒运计划
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlBayTransferController.DeleteTransferPlan(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            删除库间倒运计划
+            </summary>
+            <param name="ids"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlCraneTaskController.GetAllTaskList(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取行车吊运任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlCraneTaskController.UpdateTaskState(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持冻结吊运任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlCraneTaskController.UpdateTaskFrozon(System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            客户端冻结吊运任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlCraneTaskController.UpdateUserCraneId(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            发送其它行车
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlDeliveryPlanController.GetMpAnalysis(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            备料，发货量统计
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlDeliveryPlanController.GetPlanMaterialPercentOrder(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            备料占比订单
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlFinishLineController.GetLine(System.Threading.CancellationToken)">
+            <summary>
+            获取上料机组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlFinishLineController.GetStockPlan(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取生产计划号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlFinishLineController.GetAllStockList(System.String,System.Threading.CancellationToken)">
+            <summary>
+            上料计划钢卷列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlFinishLineController.LoadMaterial(System.String,System.Threading.CancellationToken)">
+            <summary>
+            精整上料
+            </summary>
+            <param name="materialNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlMaterialController.UpdateLocationMaterial(WmsApi.Domain.Entities.TPlMaterial,System.Threading.CancellationToken)">
+            <summary>
+            更新库存表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlMaterialController.UpdateCoilInfo(WmsApi.Contracts.Models.TPlMaterialUpdateModel,System.Threading.CancellationToken)">
+            <summary>
+            更改物料信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlMaterialController.GetMaterialWeight(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取物料信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlProductionController.GetPlanDetails(System.String)">
+            <summary>
+            查询计划上料的物料信息
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlStackTranferController.GetStackXY(System.String,System.String,System.String)">
+            <summary>
+            查询坐标范围
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlStackTranferController.GetStackNo(System.String)">
+            <summary>
+            查询行号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlStackTranferController.GetLocationColNo(System.String)">
+            <summary>
+            查询列号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlStackTranferController.UpdateIsabled(System.String[],System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            批量启用/禁用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlStackTranferController.UpdateReset(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            批量重置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllLoadingNos_old(WmsApi.PageParam,System.String,System.Int32[],System.String[])">
+            <summary>
+            移库/发货单列表
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllLoadingNos(WmsApi.PageParam,System.String,System.String)">
+            <summary>
+            移库/发货单列表
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllUnpicked_old(System.String,System.String,System.String)">
+            <summary>
+            移库/发货 未挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllUnpicked(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货 未挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllPicked_old(System.String,System.String,System.String)">
+            <summary>
+            移库/发货 已挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllPicked(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货 已挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.Pick(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.Unpick(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货挑库取消
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.CarloadIn(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            一键整车入库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.Confirm(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货出库确认
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.Cancel(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货出库撤销
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.SendPickedToMes(WmsApi.Domain.Entities.TPlTruckLoadList,System.Collections.Generic.List{Wms.Telegram.CoilOrderDetail},System.String,System.String)">
+            <summary>
+            挑库/取消挑库 发送MES
+            </summary>
+            <param name="loadList"></param>
+            <param name="pickMatNos"></param>
+            <param name="pickType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.GetAllLoadInfo(System.String,System.Int32)">
+            <summary>
+            按主装单号查询已预挑/已挑库卷信息
+            </summary>
+            <param name="truckLoadingNo"></param>
+            <param name="pickState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.UpdateCoilPick(System.String,System.String,System.String,System.String,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            手持挑库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.HoldConfirm(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持出库确认
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.ArriveHouse(System.String,System.Threading.CancellationToken)">
+            <summary>
+            二代库手持机抵库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListController.ConfirmOutStore(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持出库确认
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListHistoryController.GetAllLoadingNos(WmsApi.PageParam,System.String,System.String)">
+            <summary>
+            移库/发货单列表
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListHistoryController.GetAllPicked(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货 已挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListHistoryController.Cancel(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货出库撤销
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllLoadingNos_old(WmsApi.PageParam,System.String,System.Int32[],System.String[])">
+            <summary>
+            移库/发货单列表
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllLoadingNos(WmsApi.PageParam,System.String,System.String)">
+            <summary>
+            移库/发货单列表
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllUnpicked_old(System.String,System.String,System.String)">
+            <summary>
+            移库/发货 未挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllUnpicked(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货 未挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllPicked_old(System.String,System.String,System.String)">
+            <summary>
+            移库/发货 已挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetAllPicked(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货 已挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.Pick(System.String,System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            移库/发货预挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.Unpick(System.String,System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            移库/发货预挑库取消
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.Confirm(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库/发货预挑库确认
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.Cancel(System.String,System.String)">
+            <summary>
+            移库/发货预挑库取消   【暂时没有取消】
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.SendPickedToMes(WmsApi.Domain.Entities.TPlTruckLoadList,System.Collections.Generic.List{Wms.Telegram.CoilOrderDetail},System.String)">
+            <summary>
+            挑库/取消挑库
+            </summary>
+            <param name="loadList"></param>
+            <param name="pickMatNos"></param>
+            <param name="pickType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.AutoPrePick(System.String,System.String,System.String)">
+            <summary>
+            自动预挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetMeasuredPrePickMats(System.Int32,System.Decimal,System.String,System.Collections.Generic.List{WmsApi.Domain.Entities.VPlMaterial})">
+            <summary>
+            获取按量预挑卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetOptimalList(System.Collections.Generic.List{WmsApi.Domain.Entities.VPlMaterial},System.Int32,System.Collections.Generic.List{WmsApi.Domain.Entities.TTrLocationMaterial})">
+            <summary>
+            将二层下的卷与一层上面的卷处理成二层，优先装
+            </summary>
+            <param name="list"></param>
+            <param name="pickNum"></param>
+            <param name="trList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckLoadListPreController.GetCombinationList(System.Int32,System.Decimal,System.Collections.Generic.List{WmsApi.Domain.Entities.VPlMaterial})">
+            <summary>
+            根据计划数量获取所有排列组合
+            </summary>
+            <param name="planCount"></param>
+            <param name="planWeight"></param>
+            <param name="satisfyPreMats"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllTruckNos_old(WmsApi.PageParam,System.Threading.CancellationToken)">
+            <summary>
+            查询已经创建的移库单信息 
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllTruckNos(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            查询已经创建的移库单信息 
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.CompleTransfer(WmsApi.Contracts.Models.TPlTruckTransferUpdateModel,System.Threading.CancellationToken)">
+            <summary>
+            补全移库单
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetTruckInfo(System.String)">
+            <summary>
+            查询需要补全的移库车辆信息 
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllUnpicked_old(WmsApi.PageParam,System.String,System.String)">
+            <summary>
+            移库单 获取未挑库钢卷
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllUnpicked(WmsApi.PageParam,System.String,System.String,System.String,System.String)">
+            <summary>
+            移库单 获取未挑库钢卷
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllPicked_old(System.String)">
+            <summary>
+            根据移库单获取 已挑库的钢卷
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllPicked(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            根据移库单获取 已挑库的钢卷
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.Pick(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库预挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.Unpick(System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            移库预挑库取消
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.Confirm(System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库预挑库 下发
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.Cancel(System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库单取消/作废
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.DeleteTransfer(System.String,System.Threading.CancellationToken)">
+            <summary>
+            移库单删除
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.SendPickedToMes(WmsApi.Domain.Entities.TPlTruckTransfer,System.Collections.Generic.List{Wms.Telegram.CoilOrderDetail},System.String)">
+            <summary>
+            挑库/取消挑库
+            </summary>
+            <param name="truckTran"></param>
+            <param name="pickMatNos"></param>
+            <param name="pickType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.SendTransferToMes(WmsApi.Domain.Entities.TPlTruckTransfer)">
+            <summary>
+            发送移库单状态
+            </summary>
+            <param name="truckTran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.ImportPickModel">
+            <summary>
+            下载已挑库钢卷模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.ImportPickData(System.String,Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
+            <summary>
+            导入已挑库钢卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetHavePortOptimalList(System.Collections.Generic.List{System.Collections.Generic.List{System.String}},System.Collections.Generic.List{WmsApi.Domain.Entities.VPlMaterial},System.Int32,System.Collections.Generic.List{WmsApi.Domain.Entities.TTrLocationMaterial},System.Nullable{System.Int32})">
+            <summary>
+            按港口批号组合获取组合最优方案
+            </summary>
+            <param name="portComList"></param>
+            <param name="list"></param>
+            <param name="pickNum"></param>
+            <param name="trList"></param>
+            <param name="weightLimit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetOptimalList(System.Collections.Generic.List{WmsApi.Domain.Entities.VPlMaterial},System.Int32,System.Collections.Generic.List{WmsApi.Domain.Entities.TTrLocationMaterial},System.Nullable{System.Int32})">
+            <summary>
+            获取二层压一层或一层上方无二层最优方案
+            </summary>
+            <param name="list">满足条件的集合</param>
+            <param name="pickNum">预配数量</param>
+            <param name="trList">当前库的在库二层</param>
+            <param name="weightLimit">限制的重量</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetCombinationList(System.Int32,System.Collections.Generic.List{System.String})">
+            <summary>
+            港口批号组合
+            </summary>
+            <param name="planCount">港口批号数量</param>
+            <param name="satisfyPreMats"></param>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetAllCombinationList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取字符串所有组合
+            </summary>
+            <param name="satisfyPreMats"></param>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetPickTypeNum(System.String[],System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取当前库内外贸水汽可配载数量
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.GetPickTypeLineNum(System.String[],System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取当前库内外贸水汽包装线可配载数量
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.AutoTransferPickDirect(System.Nullable{System.Int32}[],System.String[],System.String,System.Int32)">
+            <summary>
+            自动预挑库
+            </summary>
+        </member>
+        <member name="M:ApiPlan.Controllers.TPlTruckTransferController.PrePickReplace(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            当产线繁忙或者岚北直取装车替换已挑库的钢卷
+            </summary>
+            <param name="truckNo"></param>
+            <param name="replaceMatList"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

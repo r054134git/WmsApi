@@ -1,0 +1,46 @@
+[2022-11-15 10:56:35.0055][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting starting 
+[2022-11-15 10:56:35.4639][Debug][MassTransit.Transports.BusDepot] Starting bus instances: IBus 
+[2022-11-15 10:56:35.4803][Debug][MassTransit] Starting bus: rabbitmq://10.11.1.3/wms 
+[2022-11-15 10:56:35.7489][Debug][MassTransit] Connect: wms@10.11.1.3:5672/wms 
+[2022-11-15 10:56:36.1172][Debug][Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory] Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+[2022-11-15 10:56:36.1938][Debug][MassTransit] Connected: wms@10.11.1.3:5672/wms (address: amqp://10.11.1.3:5672, local: 65152) 
+[2022-11-15 10:56:36.2825][Debug][MassTransit] Endpoint Ready: rabbitmq://10.11.1.3/wms/LAPTOPMBH38CS0_iisexpress_bus_ntayyydm9yyx9961bdpcppeny6?temporary=true 
+[2022-11-15 10:56:36.2825][Info][MassTransit] Bus started: rabbitmq://10.11.1.3/wms 
+[2022-11-15 10:56:36.4496][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly ApiPlan 
+[2022-11-15 10:56:36.4496][Debug][Microsoft.AspNetCore.Hosting.Diagnostics] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+[2022-11-15 10:56:36.4496][Info][Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-11-15 10:56:36.4744][Info][Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-11-15 10:56:36.4744][Info][Microsoft.Hosting.Lifetime] Content root path: D:\Desktop\PCRCode\WebApi\ApiPlan 
+[2022-11-15 10:56:36.4744][Debug][Microsoft.Extensions.Hosting.Internal.Host] Hosting started 
+[2022-11-15 10:56:36.4884][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan - - 
+[2022-11-15 10:56:36.5176][Debug][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] Wildcard detected, all requests with hosts will be allowed. 
+[2022-11-15 10:56:36.5176][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:36.8177][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/index.html - - 
+[2022-11-15 10:56:36.8177][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:36.8177][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan - - - 301 - - 335.1348ms 
+[2022-11-15 10:56:37.1858][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/swagger-ui.css - - 
+[2022-11-15 10:56:37.1909][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/swagger-ui-bundle.js - - 
+[2022-11-15 10:56:37.1909][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/swagger-ui-standalone-preset.js - - 
+[2022-11-15 10:56:37.1909][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:37.1909][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:37.1909][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:37.1909][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/index.html - - - 200 - text/html;charset=utf-8 382.5854ms 
+[2022-11-15 10:56:37.2057][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2022-11-15 10:56:37.2057][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2022-11-15 10:56:37.2057][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2022-11-15 10:56:37.2273][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+[2022-11-15 10:56:37.2273][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+[2022-11-15 10:56:37.2273][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/swagger-ui.css - - - 200 142933 text/css 45.0522ms 
+[2022-11-15 10:56:37.2371][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+[2022-11-15 10:56:37.2371][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 53.4082ms 
+[2022-11-15 10:56:37.2761][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/swagger-ui-bundle.js - - - 200 986342 application/javascript 85.2416ms 
+[2022-11-15 10:56:38.0835][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/favicon-32x32.png - - 
+[2022-11-15 10:56:38.0835][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:38.0835][Trace][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Range header's value is empty. 
+[2022-11-15 10:56:38.4938][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request starting HTTP/1.1 GET http://localhost:54832/plan/v1/swagger.json - - 
+[2022-11-15 10:56:38.4938][Info][Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+[2022-11-15 10:56:38.4938][Trace][Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware] All hosts are allowed. 
+[2022-11-15 10:56:38.4938][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/favicon-32x32.png - - - 200 628 image/png 412.6327ms 
+[2022-11-15 10:56:43.4476][Info][Microsoft.AspNetCore.Hosting.Diagnostics] Request finished HTTP/1.1 GET http://localhost:54832/plan/v1/swagger.json - - - 200 - application/json;charset=utf-8 4953.7690ms 
+[2022-11-15 11:07:12.0906][Debug][MassTransit] Disconnect: wms@10.11.1.3:5672/wms 
+[2022-11-15 11:07:12.0906][Debug][MassTransit] Disconnected: wms@10.11.1.3:5672/wms 

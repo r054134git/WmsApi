@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiReport</name>
+    </assembly>
+    <members>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneInbound(System.String)">
+            <summary>
+            月（30天）入库曲线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneOutbound(System.String)">
+            <summary>
+            月（30天）出库曲线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetStackNum(System.String,System.Int32)">
+            <summary>
+            一层，二层垛位钢卷数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetGroup(System.String)">
+            <summary>
+            班组实时信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneTask(System.String,System.Threading.CancellationToken)">
+            <summary>
+            待调运任务统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetDayTask(System.String)">
+            <summary>
+            任务实时统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialWidth(System.String)">
+            <summary>
+            库存钢卷宽度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialInTime(System.String)">
+            <summary>
+            在库时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetSlabModel(System.String,System.Threading.CancellationToken)">
+            <summary>
+            中间行车大屏
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetSlabModelAz(System.String,System.Threading.CancellationToken)">
+            <summary>
+            中间行车大屏鞍座
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneSpeed(System.String)">
+            <summary>
+            大小车移动速度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIList(WmsApi.PageParam,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动作业比例查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIListDetail(WmsApi.PageParam,System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动作业比例详情查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetClassListExcel(System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            生成交接班报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetProduceExcel(System.Threading.CancellationToken)">
+            <summary>
+            生成生产报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneListExcel(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            生成行车统计报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIListDetailExcel(System.String,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            生成报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIListCommon(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动作业比例下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.CreateReportExcelHour(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            生成报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIListCommonDay2(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动作业比例下载  间隔24小时
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetBIListCommonDay(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动作业比例下载 间隔12小时
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.CreateReportExcelDay(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            生成报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialVirtual(WmsApi.PageParam,System.Threading.CancellationToken)">
+            <summary>
+            虚拟卷查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialVirtualDetail(System.String,System.Threading.CancellationToken)">
+            <summary>
+            虚拟卷详情查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialHandBag(WmsApi.PageParam,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            手包完成查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialHandBagCommon(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            手包完成下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetMaterialHandBagExcel(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            手包完成下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetWebsocket(System.String,System.Threading.CancellationToken)">
+            <summary>
+            推送消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.PrePickConfirm(System.String,System.Threading.CancellationToken)">
+            <summary>
+            推送消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.PrePickConfirm2(System.String,System.Threading.CancellationToken)">
+            <summary>
+            推送消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.PrePickConfirm3(System.String,System.Threading.CancellationToken)">
+            <summary>
+            推送消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetDbTj(System.String,System.Threading.CancellationToken)">
+            <summary>
+            当日吊运任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetDbTjBC(System.String,System.Threading.CancellationToken)">
+            <summary>
+             当日吊运任务
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetAuto1list(System.String,System.String)">
+            <summary>
+            （日）自动曲线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetAuto2list(System.String,System.String)">
+            <summary>
+            （日）入库自动曲线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetAuto3list(System.String,System.String)">
+            <summary>
+            （日）出库自动曲线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCraneTaskTime(System.String,System.Threading.CancellationToken)">
+            <summary>
+             当日吊运任务
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.DashboardController.GetCranePlanTime(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+             当日吊运计划时间
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcBayTransfersController.ReportExcel">
+            <summary>
+            生成倒运报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcBayTransfersController.ReportExcelStream">
+            <summary>
+            创建倒运报表Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcBayTransfersController.MaterialReportExcel">
+            <summary>
+            生成0点库存报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcBayTransfersController.MaterialReportExcelStream">
+            <summary>
+            创建倒运报表Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcCameraController.GetCameraRecord(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="bayName"></param>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcCraneTaskController.GetCranePercent(WmsApi.PageParam,System.String[],System.String[],System.Threading.CancellationToken)">
+            <summary>
+            行车作业比例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryController.GetAllPlanNo(System.String,System.Threading.CancellationToken)">
+            <summary>
+            手持获取批次号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryController.GetPlanNo(System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+            <summary>
+            客户端获取批次号
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryController.AddAllPlanNo(System.String,System.Threading.CancellationToken)">
+            <summary>
+            创建盘库批次号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.AddScanDetailEx(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            添加扫描信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.AddScanDetail(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            添加扫描信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.AddNotScanDetail(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            完成盘库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.DownReportExcel(System.String,System.String)">
+            <summary>
+            生成盘库报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.CreateReportPdf(System.String,System.String)">
+            <summary>
+            生成盘库Pdf报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcInventoryDetailController.CreateReportExcelStream(System.String)">
+            <summary>
+            创建报表Excel文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.GetShiftList(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            交接班统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.GetMatSumList(WmsApi.PageParam,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            物料总量展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.GetLockMatSumList(WmsApi.PageParam,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            锁定物料展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.GetCmdMatSumList(WmsApi.PageParam,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            排入运输指令的物料展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.CreateMatReportExcel(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            生成物料相关报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.GetDiverList(System.String[],System.Threading.CancellationToken)">
+            <summary>
+            交接班库存差异统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcLocationMaterialController.CreateDiverReportExcel(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            生成库存差异报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPageByStringQ(WmsApi.PageParam,System.String,System.String[],System.String,System.String,System.Threading.CancellationToken)">
+            物料履历查询
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPageByStringQExcel(System.String,System.String[],System.String,System.String,System.String,System.Threading.CancellationToken)">
+            物料履历下载
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPageByStringBayCode(WmsApi.PageParam,System.String[],System.String[],System.String,System.String[],System.String[],System.Threading.CancellationToken)">
+            自动手动查询占比
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPageByStringBayCodeCommon(System.String[],System.String[],System.String,System.String[],System.String[],System.Threading.CancellationToken)">
+            自动手动查询占比
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPageByStringBayCodeExcel(System.String[],System.String[],System.String,System.String[],System.String[],System.Threading.CancellationToken)">
+            <summary>
+            自动手动下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetTracePageList(WmsApi.PageParam,System.String,System.String[],System.String[],System.DateTime[],System.Threading.CancellationToken)">
+            <summary>
+            物料信息追溯
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetDeliveryPageList(WmsApi.PageParam,System.String,System.String[],System.DateTime[],System.Threading.CancellationToken)">
+            <summary>
+            发货履历查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetOutMatList(WmsApi.PageParam,System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            发运的物料展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.CreateOutMatReportExcel(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            生成物料相关报表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcMaterialEventController.GetPrePickPageList(WmsApi.PageParam,System.String,System.String,System.String,System.DateTime[],System.Threading.CancellationToken)">
+            <summary>
+            挑库履历查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TRcWorkModeController.GetWorkModeList(System.DateTime[],System.Threading.CancellationToken)">
+            <summary>
+            自动手动作业时长
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

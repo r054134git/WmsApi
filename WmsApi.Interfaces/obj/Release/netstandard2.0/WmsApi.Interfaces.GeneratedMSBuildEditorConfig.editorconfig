@@ -1,0 +1,4 @@
+is_global = true
+build_property.RefitInternalNamespace = WmsApi.Interfaces
+build_property.RootNamespace = WmsApi.Interfaces
+build_property.ProjectDir = E:\Work\WMS\Project\WebApiNew\WmsApi.Interfaces\

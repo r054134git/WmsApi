@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "g58ej9w+Gmi1Ofbq1xwQgF7qnMuZxnkRntZEDHrE6Bo=",
+  "Source": "ApiEquip",
+  "BasePath": "_content/ApiEquip",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

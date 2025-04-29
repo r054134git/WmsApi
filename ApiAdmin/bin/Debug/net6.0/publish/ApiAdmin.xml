@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiAdmin</name>
+    </assembly>
+    <members>
+        <member name="M:WmsApi.Controllers.TRlLocationAssignController.UpdateAssign(System.String,System.Threading.CancellationToken)">
+            <summary>
+            更改规则开关
+            </summary>
+            <param name="name"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TScAppController.GetHoldApp(System.Threading.CancellationToken)">
+            <summary>
+            手持终端版本号
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TScAppController.GetCraneApp(System.Threading.CancellationToken)">
+            <summary>
+            车载终端版本号
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TScDictionaryController.GetAllClassList(System.Threading.CancellationToken)">
+            <summary>
+            获取所有owner为空（即字典分类）的数据列表
+            </summary>
+            <param name="ownerValue"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TScDictionaryController.GetChainPage(System.String,System.Threading.CancellationToken)">
+            <summary>
+            各库产线列表
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TScTransferSpecController.GetAllTransferSpecLeft(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            宽度/左侧
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TScTransferSpecController.GetAllTransferSpecRight(System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            宽度/右侧
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TScTransferTerminalController.GetAllTransferSpecLeft(WmsApi.PageParam,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            码头/左侧
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TScTransferTerminalController.GetAllTransferSpecRight(System.String,System.Threading.CancellationToken)">
+            <summary>
+            码头/右侧
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TScTransferTerminalController.GetCodeName(System.String,System.Threading.CancellationToken)">
+            <summary>
+            查询码头名称
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TUmMenuController.GetAllFolderList(System.Threading.CancellationToken)">
+            <summary>
+            获取所有ownerid为空（即菜单文件夹）的数据列表
+            </summary>
+        </member>
+        <member name="M:WmsApi.Controllers.TUmMenuController.GetAllList(System.Threading.CancellationToken)">
+            <summary>
+            获取所有的菜单列表
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TUmRoleController.GetAllList(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取所有的角色列表
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TUmRolePermissionController.GetAllListQuery(System.String,System.Threading.CancellationToken)">
+            <summary>
+            获取所有的菜单列表
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WmsApi.Controllers.TUmRolePermissionController.AddRolePermissonList(System.String,System.String[],System.Threading.CancellationToken)">
+            <summary>
+            获取所有的菜单列表
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
