@@ -1109,6 +1109,37 @@ namespace ApiPlan.Controllers
         }
 
         /// <summary>
+        /// 二代库手持机抵库
+        /// </summary>
+        [HttpPost("")]
+        public async Task<ActionResult<OperationResult>> ArriveHouse(string mainTruckLoadingNo, CancellationToken cancellationToken)
+        {
+            var repoPl = DataContext.Set<TPlMaterial>();
+            var plLoadLists = DataContext.Set<TPlTruckLoadList>();
+            var loadList = await plLoadLists.Where(t => t.MainTruckLoadingNo == mainTruckLoadingNo).ToListAsync();
+            if (loadList == null || loadList.Count <= 0)
+            {
+                return new OperationResult(false, $"抵库失败，无装车单信息");
+            }
+            var loadListIds = loadList.Select(t => t.Id).ToList();
+            var materialList = repoPl.Where(t => !string.IsNullOrEmpty(t.TruckLoadListId) && loadListIds.Contains(t.TruckLoadListId)).ToList();
+
+            if (materialList == null || materialList.Count <= 0)
+            {
+                return new OperationResult(false, $"抵库失败，未找到预挑库卷信息");
+            }
+            //开始打标记
+            foreach (var upMat in materialList)
+            {
+                upMat.DefectRecorder = loadList.FirstOrDefault().VehicleNo;
+                upMat.DefectRecordTime = DateTime.Now;
+            }
+            await DataContext.SaveChangesAsync(cancellationToken);
+            return new OperationResult(true, $"抵库成功");
+        }
+
+
+        /// <summary>
         /// 手持出库确认
         /// </summary>
         [HttpPost("")]
