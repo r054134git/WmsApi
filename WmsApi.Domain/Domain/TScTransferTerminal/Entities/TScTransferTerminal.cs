@@ -1,0 +1,128 @@
+using System;
+using System.Collections.Generic;
+
+namespace WmsApi.Domain.Entities
+{
+    /// <summary>
+    /// Entity class representing data for table 't_sc_transfer_terminal'.
+    /// </summary>
+    public partial class TScTransferTerminal
+        : IHaveIdentifier
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TScTransferTerminal"/> class.
+        /// 数据字典表
+        /// </summary>
+        public TScTransferTerminal()
+        {
+            #region Generated Constructor
+            #endregion
+        }
+
+        #region Generated Properties
+        /// <summary>
+        /// Gets or sets the property value representing column 'ID'.
+        /// ''.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'ID'.
+        /// </value>
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'CODE_NUMBER'.
+        /// '代码编号'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'CODE_NUMBER'.
+        /// </value>
+        public string CodeNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'CODE'.
+        /// '代码'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'CODE'.
+        /// </value>
+        public string Code { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'CITY_NAME'.
+        /// '终点码头'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'CITY_NAME'.
+        /// </value>
+        public string CityName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'BELONG_CITY_NAME'.
+        /// '所属终点码头'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'BELONG_CITY_NAME'.
+        /// </value>
+        public string BelongCityName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'IS_ENABLE'.
+        /// '是否可用'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'IS_ENABLE'.
+        /// </value>
+        public int? IsEnable { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'CREATE_TIME'.
+        /// '创建时间'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'CREATE_TIME'.
+        /// </value>
+        public DateTime? CreateTime { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'CREATE_USER'.
+        /// '创建人账号'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'CREATE_USER'.
+        /// </value>
+        public string CreateUser { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'UPDATE_TIME'.
+        /// '更新时间'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'UPDATE_TIME'.
+        /// </value>
+        public DateTime? UpdateTime { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'UPDATE_USER'.
+        /// '更新人账号'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'UPDATE_USER'.
+        /// </value>
+        public string UpdateUser { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property value representing column 'REMARK'.
+        /// '备注'.
+        /// </summary>
+        /// <value>
+        /// The property value representing column 'REMARK'.
+        /// </value>
+        public string Remark { get; set; }
+
+        #endregion
+
+        #region Generated Relationships
+        #endregion
+
+    }
+}
