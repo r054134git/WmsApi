@@ -52,12 +52,15 @@ namespace WmsApi.Controllers
             var craneList = await queryCrane.ToListAsync();
 
             var rcCraneTasks = DataContext.Set<TRcCraneTask>();
+            var rcMaterialEvents = DataContext.Set<TRcMaterialEvent>();
             var query = rcCraneTasks.AsNoTracking();
+            var evQuery = rcMaterialEvents.AsNoTracking();
             if (time.Length > 0 && time != null)
             {
                 var Bstartime = Convert.ToDateTime(time[0]);
                 var Bendtime = Convert.ToDateTime(time[1]);
                 query = query.Where(t => t.StartTime > Bstartime && t.EndTime < Bendtime);
+                evQuery = evQuery.Where(t => t.Dt > Bstartime && t.Dt <= Bendtime);
             }
             else
             {
@@ -66,12 +69,14 @@ namespace WmsApi.Controllers
                 var Bstartime = Convert.ToDateTime($"{startime} 09:00:00");
                 var Bendtime = Convert.ToDateTime($"{endtime} 18:00:00");
                 query = query.Where(t => t.StartTime > Bstartime && t.EndTime < Bendtime);
+                evQuery = evQuery.Where(t => t.Dt > Bstartime && t.Dt <= Bendtime);
             }
             var result = new PageResult<CraneModel>();
             var listmodel = new List<CraneModel>();
 
             foreach (var crane in craneList)
             {
+                var bayCode = DataContext.Set<TWhBay>().FirstOrDefault(t => t.Id == crane.OwnerId).Code;
                 var plan = query.Where(t => t.CraneName == crane.Name);
 
                 var count1 = plan.Where(t => t.PlanTypeName == "倒垛").Count();
@@ -86,6 +91,36 @@ namespace WmsApi.Controllers
                 var count8 = plan.Where(t => t.PlanTypeName == "过跨倒运").Count();
 
                 var count9 = plan.Where(t => t.PlanTypeName == "钢卷下线").Count();
+
+                if (crane == craneList.FirstOrDefault())
+                {
+                    var ddR = evQuery.Where(t => t.OperationType == "人工"
+                        && EF.Functions.Like(t.FromLocationName, "" + bayCode + "%")
+                        && EF.Functions.Like(t.ToLocationName, "" + bayCode + "%")
+                        && !t.FromLocationName.Contains("" + bayCode + "0M")
+                        && !t.FromLocationName.Contains("" + bayCode + "0N")
+                        && !t.ToLocationName.Contains("" + bayCode + "P")
+                        && t.Result == "成功"
+                   ).Count();
+
+                    var inputR = evQuery.Where(t => t.OperationType == "人工" && t.ContentType == "入库"
+                      && !string.IsNullOrEmpty(t.CraneName)
+                      && (EF.Functions.Like(t.FromLocationName, "" + bayCode + "0M%")
+                      || EF.Functions.Like(t.FromLocationName, "" + bayCode + "0N%"))
+                       && t.Result == "成功"
+                     ).Count();
+
+                    var outR = evQuery.Where(t => t.OperationType == "人工" && t.ContentType == "出库"
+                       && !string.IsNullOrEmpty(t.CraneName)
+                       && EF.Functions.Like(t.FromLocationName, "" + bayCode + "0%")
+                       && (EF.Functions.Like(t.ToLocationName, "" + bayCode + "P%") || t.Description.Contains("装车或是地面"))
+                        && t.Result == "成功"
+                  ).Count();
+                    count2 += outR;
+                    count1 += ddR;
+                    count9 += inputR;
+                }
+
                 var count10 = plan.Where(t => t.PlanTypeName == "退库到包装库").Count();
 
                 var craneModel = new CraneModel()

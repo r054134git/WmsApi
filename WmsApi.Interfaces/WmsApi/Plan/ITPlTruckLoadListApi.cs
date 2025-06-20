@@ -52,6 +52,9 @@ namespace WmsApi.Plan
         [Post("/plan/TPlTruckLoadList/HoldConfirm")]
         Task<OperationResult> HoldConfirm(string mainTruckLoadingNo = null, string sourceHouse = null);
 
+        [Post("/plan/TPlTruckLoadList/ArriveHouse")]
+        Task<OperationResult> ArriveHouse(string mainTruckLoadingNo = null);
+
         [Post("/plan/TPlTruckLoadList/ConfirmOutStore")]
         Task<OperationResult> ConfirmOutStore(string bayCode = null, string vehicleNo = null, string mainTruckLoadingNo = null);
 

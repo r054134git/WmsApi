@@ -22,7 +22,7 @@ namespace WmsApi.Controllers
         {
         }
 
-        [HttpGet("")] // 标识该方法将响应HTTP GET请求
+        [HttpGet("")]
         public override async Task<ActionResult<PageResult<TTrTruckBayQueueReadModel>>>
             GetPageByString([FromQuery] PageParam pageParam, string where,
                             string orders, CancellationToken cancellationToken)

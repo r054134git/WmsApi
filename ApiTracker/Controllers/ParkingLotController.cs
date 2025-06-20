@@ -687,6 +687,7 @@ namespace WmsApi.Controllers
         [HttpPost("")]
         public async Task<ActionResult<OperationResult>> GateControl(GateControlParas para)
         {
+            // 检查访问令牌是否为空，如果为空则获取新的令牌
             if (string.IsNullOrWhiteSpace(_accessToken))
             {
                 var tokenResult = await _gateTokenApi.GetToken("system");
@@ -702,6 +703,7 @@ namespace WmsApi.Controllers
                     }
                 }
             }
+            // 如果访问令牌不为空，则调用门禁控制接口
             if (!string.IsNullOrWhiteSpace(_accessToken))
             {
                 var result = await _gateApi.GateControl(para, _accessToken);
@@ -722,15 +724,11 @@ namespace WmsApi.Controllers
         [HttpPost("")]
         public async Task<ActionResult<OperationResult>> GateOpenOrClose(string gateId, int type)
         {
+            // 创建门禁控制参数对象
             var para = new GateControlParas();
-            //var gate = await _dataContext.Set<TEqGateParking>().FirstOrDefaultAsync(t => t.Code == gateCode);
-            //if (gate == null)
-            //{
-            //    return new OperationResult(false, $"Code为{gateCode}的数据不存在");
-            //}
-
             para.ChannelId = gateId;
             para.OperateType = type;
+            // 检查访问令牌是否为空，如果为空则获取新的令牌
             if (string.IsNullOrWhiteSpace(_accessToken))
             {
                 var tokenResult = await _gateTokenApi.GetToken("system");
@@ -746,6 +744,7 @@ namespace WmsApi.Controllers
                     }
                 }
             }
+            // 如果访问令牌不为空，则调用门禁控制接口
             if (!string.IsNullOrWhiteSpace(_accessToken))
             {
                 var result = await _gateApi.GateControl(para, _accessToken);

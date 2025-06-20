@@ -546,7 +546,7 @@ namespace WmsApi.Controllers
                         message.Type = "0";
                     }
 
-                    if (!message.Area.Contains("M") && !message.Area.Contains("N") && !message.Area.Contains("X") && !message.Area.Contains("Y"))
+                    if (!message.Area.Contains("0M") && !message.Area.Contains("0N") && !message.Area.Contains("0X") && !message.Area.Contains("0Y"))
                     {
                         repoMessage.Add(message);
                     }
@@ -831,7 +831,7 @@ namespace WmsApi.Controllers
                     {
                         message.Type = "0";
                     }
-                    if (!message.Area.Contains("M") && !message.Area.Contains("N") && !message.Area.Contains("X") && !message.Area.Contains("Y"))
+                    if (!message.Area.Contains("0M") && !message.Area.Contains("0N") && !message.Area.Contains("0X") && !message.Area.Contains("0Y"))
                     {
                         repoMessage.Add(message);
                     }
@@ -1203,7 +1203,7 @@ namespace WmsApi.Controllers
                         message.Type = "0";
                     }
 
-                    if (!message.Area.Contains("M") && !message.Area.Contains("N") && !message.Area.Contains("X") && !message.Area.Contains("Y"))
+                    if (!message.Area.Contains("0M") && !message.Area.Contains("0N") && !message.Area.Contains("0X") && !message.Area.Contains("0Y"))
                     {
                         repoMessage.Add(message);
                     }

@@ -511,10 +511,10 @@ namespace WmsApi.Controllers
             var startime = Convert.ToDateTime(time[0]);
             var endtime = Convert.ToDateTime(time[1]);
             predicate = predicate.And(t => t.OperationType == "自动" && t.ContentType == "出库"
-                            && (EF.Functions.Like(t.FromLocationName, "" + bay.Code + "%")
-                            || EF.Functions.Like(t.ToLocationName, "" + bay.Code + "%"))
-                             && t.Dt > startime
-                             && t.Dt <= endtime);
+                        && (EF.Functions.Like(t.FromLocationName, "" + bay.Code + "%")
+                        || EF.Functions.Like(t.ToLocationName, "" + bay.Code + "%"))
+                         && t.Dt > startime
+                         && t.Dt <= endtime);
             query = query.Where(predicate);
 
             // 执行分页查询并返回结果
